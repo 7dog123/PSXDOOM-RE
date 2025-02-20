@@ -1,5 +1,6 @@
 cmake_minimum_required (VERSION 3.25)
 
+# Set the toolchain file if not defined
 if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
   if(DEFINED ENV{PS2DEV})
     set(CMAKE_TOOLCHAIN_FILE $ENV{PS2DEV}/share/ps2dev.cmake CACHE PATH "toolchain file")
@@ -8,14 +9,20 @@ if(NOT DEFINED CMAKE_TOOLCHAIN_FILE)
   endif()
 endif()
 
+# Project configuration
 set(PROJECT_NAME PSXDOOM)
 project(${PROJECT_NAME} LANGUAGES C ASM)
+
 include("${PS2DEV}/share/ps2dev.cmake" REQUIRED)
 INCLUDE_DIRECTORIES("${PS2SDK}/iop/include")
+
 set(GAME_SRC_DIR "${PROJECT_SOURCE_DIR}/${PROJECT_NAME}")
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wreturn-type -O2 -g")
+# Compiler settings
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wreturn-type -Wextra -Wall -O2 -g")
 
+# Source files
 set(SOURCES
     ${GAME_SRC_DIR}/d_main.c
 	${GAME_SRC_DIR}/info.c
@@ -85,4 +92,5 @@ set(SOURCES
 	${GAME_SRC_DIR}/snmain.s
 )
 
+# Add executable
 add_executable(${PROJECT_NAME}.elf ${SOURCES})
