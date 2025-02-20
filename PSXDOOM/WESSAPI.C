@@ -17,6 +17,7 @@
 #include "wessapi.h"
 #include "wessseq.h"
 //#include "wessapix.h"
+#include <string.h>
 
 #define MINIMUM_TRACK_INDXS_FOR_A_SEQUENCE 4//10
 

@@ -8,7 +8,8 @@
 #ifndef _SEQLOAD_H
 #define _SEQLOAD_H
 
-#include <libspu.h>
+#include <libspu2.h>
+
 #include "wessapi.h"
 #include "wessarc.h"
 

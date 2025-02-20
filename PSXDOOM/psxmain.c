@@ -4,17 +4,23 @@
 
 /* SONY LIBRARIES */
 #include <sys/types.h>
+#ifndef PS2
 #include <r3000.h>
 #include <asm.h>
+#endif
 #include <kernel.h>
+#ifndef PS2
 #include <libetc.h>
 #include <libgte.h>
 #include <libgpu.h>
 #include <libsn.h>
+#endif
 #include <libgs.h>
+#ifndef PS2
 #include <libapi.h>
 #include <libcomb.h>
 #include <libetc.h>
+#endif
 #include <sys/file.h> //O_RDONLY|O_WRONLY|O_NOWAIT
 #include <sys/ioctl.h>
 

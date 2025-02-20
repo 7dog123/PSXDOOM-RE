@@ -3,6 +3,8 @@
 #include "doomdef.h"
 #include "p_local.h"
 
+#include <stdlib.h>
+
 //completo y revisado
 
 static mobj_t *checkthing;		/* Used for PB_CheckThing */    //pmGp00000c60

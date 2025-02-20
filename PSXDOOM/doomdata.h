@@ -8,7 +8,9 @@
 
 #ifndef __BYTEBOOL__
 #define __BYTEBOOL__
-typedef enum {false, true} boolean;
+#include <stdbool.h>
+
+typedef bool boolean;
 typedef unsigned char byte;
 #endif
 

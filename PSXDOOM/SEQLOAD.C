@@ -5,6 +5,7 @@
 #define _ALIGN4_ 1
 
 #include <stdio.h>
+#include <string.h>
 
 extern pmasterstat *pm_stat;
 

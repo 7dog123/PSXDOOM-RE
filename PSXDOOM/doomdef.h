@@ -22,17 +22,25 @@
 
 /* SONY LIBRARIES */
 #include <sys/types.h>
+#ifndef PS2
 #include <r3000.h>
 #include <asm.h>
+#endif
 #include <kernel.h>
+#ifndef PS2
 #include <libetc.h>
 #include <libgte.h>
 #include <libgpu.h>
 #include <libsn.h>
+#endif
 #include <libgs.h>
+#ifndef PS2
 #include <libapi.h>
 #include <libcomb.h>
 #include <libetc.h>
+#endif
+#include <input.h>
+
 #include <sys/file.h> /* O_RDONLY|O_WRONLY|O_NOWAIT */
 
 /* PSX CD INCLUDES */
@@ -885,6 +893,7 @@ extern	int		vblsinframe[MAXPLAYERS];		/* range from 4 to 8 */
 /*----- */
 
 /* CONTROL PAD */
+#ifndef PS2
 #define PAD_UP			(1<<12)//4096
 #define PAD_DOWN		(1<<14)//16384
 #define PAD_LEFT		(1<<15)//32768
@@ -899,6 +908,7 @@ extern	int		vblsinframe[MAXPLAYERS];		/* range from 4 to 8 */
 #define PAD_R2			(1<< 1)//2
 #define PAD_START		(1<<11)//2048
 #define PAD_SELECT		(1<< 8)//256
+#endif
 #define PAD_LR			(PAD_L1 | PAD_L2 | PAD_R1 | PAD_R2)//15
 #define PAD_ARROWS		(PAD_UP | PAD_RIGHT | PAD_DOWN | PAD_LEFT)//61440
 #define PAD_ACTION		(PAD_TRIANGLE | PAD_CIRCLE | PAD_CROSS | PAD_SQUARE)//240
@@ -936,8 +946,13 @@ extern int xcount;
 extern int ycount;
 extern int V_PagFlags;
 
+#ifndef PS2
 extern DRAWENV	draw[2];				/* draw environment */      //800A8E90, 800A8EEC
 extern DISPENV disp[2];					/* display environment*/    //800a8f48, 800A8F5C
+#else
+extern GS_DRAWENV draw[2];					/* draw environment */      //800A8E90, 800A8EEC
+extern GS_DISPENV disp[2];					/* display environment*/    //800a8f48, 800A8F5C
+#endif
 extern long drawside;
 extern int	drawsync1;//80077FE4
 extern int	drawsync2;//80077F3C

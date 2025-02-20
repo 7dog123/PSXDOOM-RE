@@ -1,7 +1,7 @@
 #ifndef _WESSSEQ_H
 #define _WESSSEQ_H
 
-#include <libspu.h>
+#include <libspu2.h>
 #include "wessapi.h"
 #include "wessarc.h"
 

@@ -6,7 +6,9 @@
 #include "r_local.h"
 
 //global gp para checkear funciones
+#ifndef PS2 // Ignore for now
 int _gp = 'D' | ('M' << 8) | ('G' << 16) | ('P' << 24);
+#endif
 
 int	*demo_p = NULL;             //80077418
 int	*demobuffer = NULL;         //8007741C
@@ -387,7 +389,7 @@ int MiniLoop(void(*start)(void), void(*stop)(int), int(*ticker)(void), void(*dra
 		oldticbuttons[0] = ticbuttons[0];
 		oldticbuttons[1] = ticbuttons[1];
 
-		buttons = PadRead(0);
+		buttons = padRead(0);
 		ticbuttons[consoleplayer] = buttons;
 
 		if (netgame != gt_single)

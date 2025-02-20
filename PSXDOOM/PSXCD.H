@@ -25,7 +25,7 @@
     */
 
 #include <sys\types.h>
-#include <libcd.h>
+#include <libcdvd.h>
 
 #define _CD_VERSION_  1
 #define _CD_SPU_LINK_ 1//para cd tracks
@@ -40,8 +40,8 @@
 #endif
 
 typedef struct PsxCd_File {
-    CdlFILE       file;
-    CdlLOC        new_io_loc;
+	sceCdlFILE    file;
+    sceCdlLOCCD   new_io_loc;
     unsigned long io_block_offset;
     unsigned char io_result[8];
 }PsxCd_File;
@@ -50,7 +50,7 @@ typedef struct PsxCd_File {
 
 typedef struct PsxCd_MapTbl {
     int           abs;
-    u_long        size;
+	unsigned long size;
 }PsxCd_MapTbl;
 
 extern PsxCd_MapTbl cdmaptbl[];

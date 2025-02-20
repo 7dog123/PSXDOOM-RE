@@ -19,7 +19,6 @@ INCLUDE_DIRECTORIES("${PS2SDK}/iop/include")
 set(GAME_SRC_DIR "${PROJECT_SOURCE_DIR}/${PROJECT_NAME}")
 
 # Compiler settings
-set(CMAKE_C_STANDARD 99)
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wreturn-type -Wextra -Wall -O2 -g")
 
 # Source files
@@ -94,3 +93,9 @@ set(SOURCES
 
 # Add executable
 add_executable(${PROJECT_NAME}.elf ${SOURCES})
+
+# Link Libraries
+target_link_libraries(${PROJECT_NAME}.elf PRIVATE
+      kernel
+	  spu2
+	  pad )

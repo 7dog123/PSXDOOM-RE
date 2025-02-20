@@ -18,7 +18,7 @@
 
 
 #include "kernel.h"
-#include <libspu.h>
+#include <libspu2.h>
 #include "wessarc.h"
 #include "wessapi.h"
 #include "wessseq.h"

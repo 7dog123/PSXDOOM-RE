@@ -36,23 +36,23 @@
 static volatile int seeking_for_play = 0;
 static volatile int waiting_for_pause = 0;
 static volatile int async_on = 0;
-static CdlLOC sectorbuf_contents = {0,0,0,0};
+static sceCdlLOCCD sectorbuf_contents = {0,0,0,0};
 
 static void psxcd_memcpy(void *pdest, void *psrc, unsigned long bytestocopy);
 
 //static void (*cd_pause_callback)(void) = 0;
 
-static u_long cbsyncsave;
-static u_long cbreadysave;
-static void cbcomplete(int intr, u_char *result);
-static void cbready(int intr, u_char *result);
+static unsigned long cbsyncsave;
+static unsigned long cbreadysave;
+static void cbcomplete(int intr, unsigned char *result);
+static void cbready(int intr, unsigned char *result);
 
 static int psxcd_mode = -1; //initially an undefined mode
 static int IsCdInit = 0;
 static int init_pos = 0;
 
 static PsxCd_File cdfile;
-static CdlLOC cur_io_loc = {0,0,0,0};
+static sceCdlLOCCD cur_io_loc = {0,0,0,0};
 
 int cb_enable_flag = 0;
 int critical_error = 0;
@@ -88,7 +88,7 @@ typedef struct PsxCd_Command {
     int     amount; //sectors or bytes
     char   *pdest;  //buffer or direct
     char   *psrc;  //buffer pos
-    CdlLOC  io_loc;
+    sceCdlLOCCD  io_loc;
 }PsxCd_Command;
 
 static int cur_cmd = 0;
@@ -108,12 +108,12 @@ static int loopflag = 0;
 static int loopvol = 0;
 static int loopsectoroffset = 0;
 static int loopfadeuptime = 0;
-static CdlLOC  cdloc = {0,0,0,0};
+static sceCdlLOCCD  cdloc = {0,0,0,0};
 static CdlATV  cdatv = {0,0,0,0};
-static CdlLOC  loc[100];
-static CdlLOC  newloc = {0,0,0,0};
-static CdlLOC  lastloc = {0,0,0,0};
-static CdlLOC  beginloc = {0,0,0,0};
+static sceCdlLOCCD  loc[100];
+static sceCdlLOCCD  newloc = {0,0,0,0};
+static sceCdlLOCCD  lastloc = {0,0,0,0};
+static sceCdlLOCCD  beginloc = {0,0,0,0};
 
 static void psxcd_memcpy(void *pdest, void *psrc, unsigned long bytestocopy)//L8003EF70()
 {
@@ -134,7 +134,7 @@ static void psxcd_sync(void)//8003EFA4
 
     while(millicount<block)
     {
-        sync_intr = CdSync(1,(u_char *)sync_result);
+        sync_intr = CdSync(1,(unsigned char *)sync_result);
         if(sync_intr==CdlDiskError)
         {
             CdFlush();
@@ -156,7 +156,7 @@ static int psxcd_critical_sync(void)//8003F060
 
     while(millicount<block)
     {
-        sync_intr = CdSync(1,(u_char *)sync_result);
+        sync_intr = CdSync(1,(unsigned char *)sync_result);
         if(sync_intr==CdlDiskError)
         {
             CdFlush();
@@ -171,7 +171,7 @@ static int psxcd_critical_sync(void)//8003F060
     return(0);
 }
 
-static void cbcomplete(int intr, u_char *result)//8003F11C
+static void cbcomplete(int intr, unsigned char *result)//8003F11C
 {
     if(!cb_enable_flag) return;
 
@@ -209,12 +209,12 @@ static void cbcomplete(int intr, u_char *result)//8003F11C
         cdl_errcount++;
         //if((cdl_com==CdlSeekP)&&(result[0]&2))
         //{
-        //    CdControlF(cdl_com=CdlSeekP,(u_char *)&cdloc);
+        //    CdControlF(cdl_com=CdlSeekP,(unsigned char *)&cdloc);
         //}
     }
 }
 
-static void cbready(int intr, u_char *result)//8003F200
+static void cbready(int intr, unsigned char *result)//8003F200
 {
     if(!cb_enable_flag) return;
 
@@ -229,7 +229,7 @@ static void cbready(int intr, u_char *result)//8003F200
             switch(psxcd_cmd[cur_cmd].command)
             {
                 case PSXCD_COMMAND_READ:
-                    //if((!CdGetSector((u_long *)psxcd_cmd[cur_cmd].pdest, 2048/4))||(result[0]!=0x22))
+                    //if((!CdGetSector((unsigned long *)psxcd_cmd[cur_cmd].pdest, 2048/4))||(result[0]!=0x22))
                     //{
                     //    cdl_errintr = 50;
                     //    cdl_errcom = cdl_com;
@@ -243,12 +243,12 @@ static void cbready(int intr, u_char *result)//8003F200
                     // must check for quad align!!!!
                     if((unsigned long)psxcd_cmd[cur_cmd].pdest&3)
                     {
-                        CdGetSector((u_long *)sectorbuf, 2048/4);
+                        CdGetSector((unsigned long *)sectorbuf, 2048/4);
                         psxcd_memcpy(psxcd_cmd[cur_cmd].pdest,
                                      sectorbuf,
                                      2048);
                     } else {
-                        CdGetSector((u_long *)psxcd_cmd[cur_cmd].pdest, 2048/4);
+                        CdGetSector((unsigned long *)psxcd_cmd[cur_cmd].pdest, 2048/4);
                     }
                     psxcd_cmd[cur_cmd].pdest += 2048;
                     if(!--psxcd_cmd[cur_cmd].amount)
@@ -258,7 +258,7 @@ static void cbready(int intr, u_char *result)//8003F200
                     break;
 
                 case PSXCD_COMMAND_READCOPY:
-                    //if((!CdGetSector((u_long *)sectorbuf, 2048/4))||(result[0]!=0x22))
+                    //if((!CdGetSector((unsigned long *)sectorbuf, 2048/4))||(result[0]!=0x22))
                     //{
                     //    cdl_errintr = 50;
                     //    cdl_errcom = cdl_com;
@@ -269,7 +269,7 @@ static void cbready(int intr, u_char *result)//8003F200
                     //    //psxcd_async_read(lastdestptr,lastreadbytes,&newfilestruct);
                     //    return;
                     //}
-                    CdGetSector((u_long *)sectorbuf, 2048/4);
+                    CdGetSector((unsigned long *)sectorbuf, 2048/4);
                     psxcd_memcpy(psxcd_cmd[cur_cmd].pdest,
                                  psxcd_cmd[cur_cmd].psrc,
                                  psxcd_cmd[cur_cmd].amount);
@@ -416,8 +416,8 @@ void psxcd_init(void)//8003F620
 
     init_pos = 0;
     async_on = 0;
-    cbsyncsave = (u_long)CdSyncCallback((CdlCB)cbcomplete);
-    cbreadysave = (u_long)CdReadyCallback((CdlCB)cbready);
+    cbsyncsave = (unsigned long)CdSyncCallback((CdlCB)cbcomplete);
+    cbreadysave = (unsigned long)CdReadyCallback((CdlCB)cbready);
 
     psxcd_enable_callbacks();
 
@@ -579,7 +579,7 @@ int psxcd_async_on(void)//8003F92C
 #if _CD_VERSION_ == 1
     if(async_on)
     {
-        check_intr = CdSync(1,(u_char *)check_result);
+        check_intr = CdSync(1,(unsigned char *)check_result);
         if(critical_error ||
            (check_intr==CdlDiskError) ||
            //(check_result[0] & !(CdlStatSeek|CdlStatRead|CdlStatStandby)) || // This line of code are blocked in Psx Doom
@@ -610,7 +610,7 @@ int psxcd_seeking_for_play(void)//8003FA34
 #if _CD_VERSION_ == 1
     if(seeking_for_play)
     {
-        check_intr = CdSync(1,(u_char *)check_result);
+        check_intr = CdSync(1,(unsigned char *)check_result);
         if((check_intr==CdlDiskError) ||
            //(check_result[0] & !(CdlStatSeek|CdlStatPlay|CdlStatStandby)) || // This line of code are blocked in Psx Doom
            !(check_result[0] & CdlStatStandby))
@@ -624,7 +624,7 @@ int psxcd_seeking_for_play(void)//8003FA34
             //reissue the last play command
             psxcd_sync();
 
-            CdControlF(cdl_com=CdlSeekP, (u_char *)&lastloc);
+            CdControlF(cdl_com=CdlSeekP, (unsigned char *)&lastloc);
         }
         return(1);
     } else {
@@ -640,7 +640,7 @@ int psxcd_waiting_for_pause(void)//8003FAE4
 #if _CD_VERSION_ == 1
     if(waiting_for_pause)
     {
-        check_intr = CdSync(1,(u_char *)check_result);
+        check_intr = CdSync(1,(unsigned char *)check_result);
         if((check_intr==CdlDiskError) ||
            //(check_result[0] & !(CdlStatSeek|CdlStatRead|CdlStatPlay|CdlStatStandby)) || // This line of code are blocked in Psx Doom
            !(check_result[0] & CdlStatStandby))
@@ -871,7 +871,7 @@ int psxcd_async_read(void *destptr,int readbytes,PsxCd_File *fileptr)//8003FC14
             // do seek
             psxcd_sync();
             CdControl(cdl_com=CdlSetloc,
-                      (u_char *)&psxcd_cmd[cur_cmd].io_loc, 0);
+                      (unsigned char *)&psxcd_cmd[cur_cmd].io_loc, 0);
             // increment cur_cmd
             cur_cmd++;
             if(psxcd_cmd[cur_cmd].command == PSXCD_COMMAND_END)
@@ -891,7 +891,7 @@ int psxcd_async_read(void *destptr,int readbytes,PsxCd_File *fileptr)//8003FC14
                     break;
                 }
                 CdControl(cdl_com=CdlReadN,
-                          (u_char *)&psxcd_cmd[cur_cmd].io_loc, 0);
+                          (unsigned char *)&psxcd_cmd[cur_cmd].io_loc, 0);
                 if(!psxcd_critical_sync())
                 {
                     read_setup_failure = 1;
@@ -1054,7 +1054,7 @@ void psxcd_play_at_andloop(int track,
     loopfadeuptime = loopstartfadeuptime;
     seeking_for_play = 1;
     playfadeuptime = fadeuptime;
-    CdControlF(cdl_com=CdlSeekP, (u_char *)&cdloc);
+    CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
 
     lastloc = loc[track];
     beginloc = lastloc;
@@ -1088,7 +1088,7 @@ void psxcd_play_at(int track, int vol, int sectoroffset)//800407B8
     seeking_for_play = 1;
     playfadeuptime = 0;
 
-    CdControlF(cdl_com=CdlSeekP, (u_char *)&cdloc);
+    CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
 
     lastloc = loc[track];
     beginloc = lastloc;
@@ -1123,7 +1123,7 @@ void psxcd_seek_for_play_at(int track, int sectoroffset)//800408FC
     playflag = 0;
     loopflag = 0;
     seeking_for_play = 1;
-    CdControlF(cdl_com=CdlSeekP, (u_char *)&cdloc);
+    CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
 
     lastloc = loc[track];
     beginloc = lastloc;
@@ -1142,7 +1142,7 @@ int psxcd_play_status(void)//80040A30
 #if _CD_VERSION_ == 1
     if((cdl_com==CdlPlay)||(cdl_com==CdlSeekP))
     {
-        check_intr = CdSync(1,(u_char *)check_result);
+        check_intr = CdSync(1,(unsigned char *)check_result);
         if((check_intr==CdlDiskError) ||
            //(check_result[0] & !(CdlStatSeek|CdlStatPlay|CdlStatStandby)) || // This line of code are blocked in Psx Doom
            !(check_result[0] & CdlStatStandby))
@@ -1242,7 +1242,7 @@ void psxcd_restart(int vol)//80040BE4
     playcount = 0;
     playflag = 1;
     seeking_for_play = 1;
-    CdControlF(cdl_com=CdlSeekP, (u_char *)&cdloc);
+    CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
 
 #endif
 }

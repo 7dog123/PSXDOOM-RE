@@ -2,7 +2,7 @@
 // Update_1 20/10/2019 [GEC]
 // Update_2 31/01/2020 [GEC]
 
-#include <libspu.h>
+#include <libspu2.h>
 #include "psxspu.h"
 #include "wessapi.h"
 

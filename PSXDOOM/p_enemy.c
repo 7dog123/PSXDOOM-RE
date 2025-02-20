@@ -3,6 +3,8 @@
 #include "doomdef.h"
 #include "p_local.h"
 
+#include <stdlib.h>
+
 void A_Fall (mobj_t *actor);
 
 /*

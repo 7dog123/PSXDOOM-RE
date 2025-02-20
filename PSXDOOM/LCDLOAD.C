@@ -1,7 +1,7 @@
 // Reconstruido por Erick Vasquez Garcia 16/05/2019 [GEC]
 // Update 20/10/2019 [GEC]
 
-#include <libspu.h>
+#include <libspu2.h>
 #include "psxcd.h"
 #include "psxspu.h"
 #include "wessapi.h"

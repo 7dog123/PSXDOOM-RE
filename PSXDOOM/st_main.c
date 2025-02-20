@@ -4,6 +4,8 @@
 #include "st_main.h"
 #include "r_local.h"
 
+#include <stdio.h>
+
 stbar_t	stbar; //800984F4
 psxobj_t statuspic;//0x800a92cc
 
@@ -411,7 +413,7 @@ void ST_Drawer (void)//L80038888();
 		/* */
 		/* Draw Map Name Message */
 		/* */
-		sprintf(text, "LEVEL %d:%s", gamemap, mapnames[gamemap-1]);
+		printf(text, "LEVEL %d:%s", gamemap, mapnames[gamemap-1]);
 		//In Psx Doom Greatest Hits and Final Doom, the value of position X was changed to 7
 	   	 #if GH_UPDATES == 1
 		ST_DrawMessage(7, 193, text);
@@ -654,7 +656,7 @@ void ST_CheatDraw(void)//L8003AA80()
 
 	if (p->cheats & CF_WARPLEVEL)
 	{
-		sprintf(text, "warp to level %d", warpmap);
+		printf(text, "warp to level %d", warpmap);
 		ST_DrawText(-1, 40, text);
 		ST_DrawText(-1, 60, mapnames[warpmap-1]);
 	}
