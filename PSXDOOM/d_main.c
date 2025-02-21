@@ -132,7 +132,7 @@ int RunCredits(void)//L800124A8()
 	return exit;
 }
 
-
+#ifndef PS2
 #include <stdarg.h> //va_list|va_start|va_end
 
 int debugX, debugY;//80077E5C|uGp00000a4c, 80077E68|uGp00000a58
@@ -148,18 +148,6 @@ void D_DebugPrint(const char *text, ...)//L800124F8()
 {
 	char buffer[256];
 	va_list args;
-	DR_MODE *drawmode = (DR_MODE*) getScratchAddr(128);//1F800200
-	SPRT    *debugsprite = (SPRT*) getScratchAddr(128);//1F800200
-
-	SetDrawMode(drawmode, 0, 0, statuspic.vtpage, NULL);
-	W_AddPrim(drawmode);// add to order table
-
-	SetSprt(debugsprite);
-	SetSemiTrans(debugsprite, 0);
-	SetShadeTex(debugsprite, 0);
-
-	setRGB0(debugsprite, 128, 128, 128);
-	debugsprite->clut = palette[0];
 
 	va_start(args, text);
 	D_vsprintf(buffer, text, args);
@@ -168,6 +156,7 @@ void D_DebugPrint(const char *text, ...)//L800124F8()
 	ST_DrawMessage(debugX, debugY, buffer);
 	debugY += 8;
 }
+#endif
 
 #define WORDMASK	3
 

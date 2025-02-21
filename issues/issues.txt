@@ -4,54 +4,13 @@ C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c: In function 'D_DoomMain':
 C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:57:9: error: implicit declaration of function 'PSX_INIT' [-Wimplicit-function-declaration]
    57 |         PSX_INIT();
       |         ^~~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c: In function 'D_DebugPrint':
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:151:9: error: unknown type name 'DR_MODE'
-  151 |         DR_MODE *drawmode = (DR_MODE*) getScratchAddr(128);//1F800200
-      |         ^~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:151:30: error: 'DR_MODE' undeclared (first use in this function)
-  151 |         DR_MODE *drawmode = (DR_MODE*) getScratchAddr(128);//1F800200
-      |                              ^~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:151:30: note: each undeclared identifier is reported only once for each function it appears in
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:151:38: error: expected expression before ')' token
-  151 |         DR_MODE *drawmode = (DR_MODE*) getScratchAddr(128);//1F800200
-      |                                      ^
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:152:9: error: unknown type name 'SPRT'
-  152 |         SPRT    *debugsprite = (SPRT*) getScratchAddr(128);//1F800200
-      |         ^~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:152:33: error: 'SPRT' undeclared (first use in this function)
-  152 |         SPRT    *debugsprite = (SPRT*) getScratchAddr(128);//1F800200
-      |                                 ^~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:152:38: error: expected expression before ')' token
-  152 |         SPRT    *debugsprite = (SPRT*) getScratchAddr(128);//1F800200
-      |                                      ^
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:154:9: error: implicit declaration of function 'SetDrawMode' [-Wimplicit-function-declaration]
-  154 |         SetDrawMode(drawmode, 0, 0, statuspic.vtpage, NULL);
-      |         ^~~~~~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:157:9: error: implicit declaration of function 'SetSprt' [-Wimplicit-function-declaration]
-  157 |         SetSprt(debugsprite);
-      |         ^~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:158:9: error: implicit declaration of function 'SetSemiTrans' [-Wimplicit-function-declaration]
-  158 |         SetSemiTrans(debugsprite, 0);
-      |         ^~~~~~~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:159:9: error: implicit declaration of function 'SetShadeTex' [-Wimplicit-function-declaration]
-  159 |         SetShadeTex(debugsprite, 0);
-      |         ^~~~~~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:161:9: error: implicit declaration of function 'setRGB0' [-Wimplicit-function-declaration]
-  161 |         setRGB0(debugsprite, 128, 128, 128);
-      |         ^~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:162:20: error: request for member 'clut' in something not a structure or union
-  162 |         debugsprite->clut = palette[0];
-      |                    ^~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:168:9: error: implicit declaration of function 'ST_DrawMessage' [-Wimplicit-function-declaration]
-  168 |         ST_DrawMessage(debugX, debugY, buffer);
-      |         ^~~~~~~~~~~~~~
 C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c: In function 'MiniLoop':
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:382:21: error: implicit declaration of function 'VSync'; did you mean 'GsVSync'? [-Wimplicit-function-declaration]
-  382 |         drawsync2 = VSync(-1);
+C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:371:21: error: implicit declaration of function 'VSync'; did you mean 'GsVSync'? [-Wimplicit-function-declaration]
+  371 |         drawsync2 = VSync(-1);
       |                     ^~~~~
       |                     GsVSync
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:392:27: error: too few arguments to function 'padRead'
-  392 |                 buttons = padRead(0);
+C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:381:27: error: too few arguments to function 'padRead'
+  381 |                 buttons = padRead(0);
       |                           ^~~~~~~
 In file included from C:/msys64/usr/local/ps2dev/ps2sdk/ee/include/input.h:9,
                  from C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/doomdef.h:42,
@@ -59,6 +18,10 @@ In file included from C:/msys64/usr/local/ps2dev/ps2sdk/ee/include/input.h:9,
 C:/msys64/usr/local/ps2dev/ps2sdk/ee/include/libpad.h:175:22: note: declared here
   175 | extern unsigned char padRead(int port, int slot, struct padButtonStatus *data);
       |                      ^~~~~~~
+C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/doomdef.h: At top level:
+C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/doomdef.h:655:13: warning: inline function 'Z_Free2' declared but never defined
+  655 | inline void Z_Free2 (memzone_t *mainzone,void *ptr);
+      |             ^~~~~~~
 
 st_main.c:
 
