@@ -83,7 +83,7 @@ int main()
 void PSX_INIT(void)//L80032804()
 {
     ResetCallback();
-    PadInit(0);
+    padInit(0);
     ResetGraph(0);
     SetGraphDebug(0);
 
@@ -105,7 +105,7 @@ void PSX_INIT(void)//L80032804()
     EnterCriticalSection();
     //__asm__("nop");
     ExitCriticalSection();
-
+#ifndef PS2 // TODO: Turn into net work play
     /* Initialize link cable communications */
     {
         /* attacth the SIO driver to the kernel */
@@ -128,7 +128,7 @@ void PSX_INIT(void)//L80032804()
         /* set comminucation rate */
         CombSetBPS(38400);
     }
-
+#endif
     DrawRender();
     DrawRender();
 
@@ -567,13 +567,16 @@ void Vram_Viewer(int page)//80033938
 	}
 }
 
+#ifndef PS2
 boolean cancel_link; //0x80077A3C *(r28 + 1580)
+#endif
 
 unsigned int TempConfiguration[8] = { PAD_TRIANGLE, PAD_CIRCLE, PAD_CROSS, PAD_SQUARE, PAD_L1, PAD_R1, PAD_L2, PAD_R2 };//80073c1c
 unsigned int ActualConfiguration[8] = { PAD_TRIANGLE, PAD_CIRCLE, PAD_CROSS, PAD_SQUARE, PAD_L1, PAD_R1, PAD_L2, PAD_R2 };	//80073c3c
 unsigned int DefaultConfiguration[8] = { PAD_TRIANGLE, PAD_CIRCLE, PAD_CROSS, PAD_SQUARE, PAD_L1, PAD_R1, PAD_L2, PAD_R2 };	//80073C5C
 unsigned int NewConfiguration[8];//0x80078120
 
+#ifndef PS2 // Turn into network play
 void Link_Conection(void)//L800345A0()
 {
 	/* The following lines enclosed by square brackets are necessary for the current PSYQ SDK libcomb.lib */
@@ -800,6 +803,7 @@ void Sync_Read_Write (void) //L80034B1C()
 		CombResetError();   /* Reset error bits */
 	} while( true );
 }
+#endif
 
 void UpdateDrawOTag(void)//80034C60
 {
@@ -822,6 +826,7 @@ void UpdateDrawOTag(void)//80034C60
 ==============
 */
 
+#ifndef PS2
 unsigned int Get_CfgCode(unsigned int *cfgdata)//L80034CAC
 {
     unsigned int *tmpcfg;
@@ -871,6 +876,7 @@ unsigned int *Get_CfgByCode(unsigned int cfgcode)//L80034D0C
 
 	return NewConfiguration;
 }
+#endif
 
 /*================================================================== */
 /* */

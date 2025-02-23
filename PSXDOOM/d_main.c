@@ -351,11 +351,11 @@ void M_AddToBox2(fixed_t *box, fixed_t x, fixed_t y)//L80012B10()
 int MiniLoop(void(*start)(void), void(*stop)(int), int(*ticker)(void), void(*drawer)(void))//80012B78
 {
 	int		exit;
+#ifndef PS2
 	int		buttons;
-
 	if (netgame != gt_single)
 		Sync_Data_Transmission();
-
+#endif
 	gameaction = ga_nothing;
 	gamevbls = 0;
 	gametic = 0;
@@ -378,9 +378,9 @@ int MiniLoop(void(*start)(void), void(*stop)(int), int(*ticker)(void), void(*dra
 		oldticbuttons[0] = ticbuttons[0];
 		oldticbuttons[1] = ticbuttons[1];
 
+#ifndef PS2
 		buttons = padRead(0);
 		ticbuttons[consoleplayer] = buttons;
-
 		if (netgame != gt_single)
 		{
 		    if (Update_Conection() != 0)
@@ -391,7 +391,8 @@ int MiniLoop(void(*start)(void), void(*stop)(int), int(*ticker)(void), void(*dra
             }
 		}
 		//Read|Write demos
-		else if (demorecording || demoplayback)
+		else
+		if (demorecording || demoplayback)
         {
             if (demoplayback)
             {
@@ -436,6 +437,7 @@ int MiniLoop(void(*start)(void), void(*stop)(int), int(*ticker)(void), void(*dra
 		}
 
 		gamevbls = gametic;
+#endif
 	}
 
 	stop(exit);

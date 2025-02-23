@@ -1,25 +1,23 @@
 d_main.c:
 
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c: In function 'D_DoomMain':
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:57:9: error: implicit declaration of function 'PSX_INIT' [-Wimplicit-function-declaration]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/d_main.c: In function 'D_DoomMain':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/d_main.c:57:9: error: implicit declaration of function 'PSX_INIT' [-Wimplicit-function-declaration]
    57 |         PSX_INIT();
       |         ^~~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c: In function 'MiniLoop':
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:371:21: error: implicit declaration of function 'VSync'; did you mean 'GsVSync'? [-Wimplicit-function-declaration]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/d_main.c: In function 'MiniLoop':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/d_main.c:371:21: error: implicit declaration of function 'VSync'; did you mean 'GsVSync'? [-Wimplicit-function-declaration]
   371 |         drawsync2 = VSync(-1);
       |                     ^~~~~
       |                     GsVSync
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:381:27: error: too few arguments to function 'padRead'
-  381 |                 buttons = padRead(0);
-      |                           ^~~~~~~
-In file included from C:/msys64/usr/local/ps2dev/ps2sdk/ee/include/input.h:9,
-                 from C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/doomdef.h:42,
-                 from C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/d_main.c:4:
-C:/msys64/usr/local/ps2dev/ps2sdk/ee/include/libpad.h:175:22: note: declared here
-  175 | extern unsigned char padRead(int port, int slot, struct padButtonStatus *data);
-      |                      ^~~~~~~
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/doomdef.h: At top level:
-C:/msys64/home/David/PSXDOOM-RE/PSXDOOM/doomdef.h:655:13: warning: inline function 'Z_Free2' declared but never defined
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/d_main.c:351:57: warning: unused parameter 'ticker' [-Wunused-parameter]
+  351 | int MiniLoop(void(*start)(void), void(*stop)(int), int(*ticker)(void), void(*drawer)(void))//80012B78
+      |                                                    ~~~~~^~~~~~~~~~~~~
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/d_main.c:351:78: warning: unused parameter 'drawer' [-Wunused-parameter]
+  351 | int MiniLoop(void(*start)(void), void(*stop)(int), int(*ticker)(void), void(*drawer)(void))//80012B78
+      |                                                                        ~~~~~~^~~~~~~~~~~~~
+In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/d_main.c:4:
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/doomdef.h: At top level:
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/doomdef.h:655:13: warning: inline function 'Z_Free2' declared but never defined
   655 | inline void Z_Free2 (memzone_t *mainzone,void *ptr);
       |             ^~~~~~~
 
