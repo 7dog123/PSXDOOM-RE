@@ -1624,117 +1624,117 @@ C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/doomdef.h:655:13: warning: inline funct
   655 | inline void Z_Free2 (memzone_t *mainzone,void *ptr);
       |             ^~~~~~~
 
-PSXCD.C:
+PSXCD.CPP:
 
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:64:25: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:64:25: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
    64 | unsigned char cdl_com = CdlPause;
       |                         ^~~~~~~~
       |                         CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:112:8: error: 'CdlATV' does not name a type
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:112:8: error: 'CdlATV' does not name a type
   112 | static CdlATV  cdatv = {0,0,0,0};
       |        ^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_memcpy(void*, void*, long unsigned int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:122:18: warning: ISO C++ forbids incrementing a pointer of type 'void*' [-Wpointer-arith]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_memcpy(void*, void*, long unsigned int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:122:18: warning: ISO C++ forbids incrementing a pointer of type 'void*' [-Wpointer-arith]
   122 |         *(char *)pdest++ = *(char *)psrc++;
       |                  ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:122:37: warning: ISO C++ forbids incrementing a pointer of type 'void*' [-Wpointer-arith]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:122:37: warning: ISO C++ forbids incrementing a pointer of type 'void*' [-Wpointer-arith]
   122 |         *(char *)pdest++ = *(char *)psrc++;
       |                                     ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_sync()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:137:27: error: too many arguments to function 'int sceCdSync(int)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_sync()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:137:27: error: too many arguments to function 'int sceCdSync(int)'
   137 |         sync_intr = CdSync(1,(unsigned char *)sync_result);
 In file included from C:/msys64/usr/local/ps2dev/ps2sdk/ee/include/libcdvd.h:19,
                  from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/psxcd.h:28,
                  from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessarc.h:5,
                  from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessapi.h:12,
-                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:16:
+                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:16:
 C:/msys64/usr/local/ps2dev/ps2sdk/common/include/libcdvd-common.h:643:12: note: declared here
   643 | extern int sceCdSync(int mode);
       |            ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:140:13: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:140:13: error: 'CdFlush' was not declared in this scope
   140 |             CdFlush();
       |             ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:146:23: error: 'CdlComplete' was not declared in this scope; did you mean 'cbcomplete'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:146:23: error: 'CdlComplete' was not declared in this scope; did you mean 'cbcomplete'?
   146 |         if(sync_intr==CdlComplete) return;
       |                       ^~~~~~~~~~~
       |                       cbcomplete
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'int psxcd_critical_sync()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:159:27: error: too many arguments to function 'int sceCdSync(int)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'int psxcd_critical_sync()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:159:27: error: too many arguments to function 'int sceCdSync(int)'
   159 |         sync_intr = CdSync(1,(unsigned char *)sync_result);
 C:/msys64/usr/local/ps2dev/ps2sdk/common/include/libcdvd-common.h:643:12: note: declared here
   643 | extern int sceCdSync(int mode);
       |            ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:162:13: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:162:13: error: 'CdFlush' was not declared in this scope
   162 |             CdFlush();
       |             ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:169:23: error: 'CdlComplete' was not declared in this scope; did you mean 'cbcomplete'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:169:23: error: 'CdlComplete' was not declared in this scope; did you mean 'cbcomplete'?
   169 |         if(sync_intr==CdlComplete) return(1);
       |                       ^~~~~~~~~~~
       |                       cbcomplete
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void cbcomplete(int, unsigned char*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:180:16: error: 'CdlComplete' was not declared in this scope; did you mean 'cbcomplete'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void cbcomplete(int, unsigned char*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:180:16: error: 'CdlComplete' was not declared in this scope; did you mean 'cbcomplete'?
   180 |     if(intr == CdlComplete)
       |                ^~~~~~~~~~~
       |                cbcomplete
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:182:21: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:182:21: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
   182 |         if(cdl_com==CdlSeekP)
       |                     ^~~~~~~~
       |                     CdSeek
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:199:36: error: 'CdlPlay' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:199:36: error: 'CdlPlay' was not declared in this scope
   199 |                 CdControlF(cdl_com=CdlPlay,0);
       |                                    ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:199:17: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:199:17: error: 'CdControlF' was not declared in this scope
   199 |                 CdControlF(cdl_com=CdlPlay,0);
       |                 ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:201:28: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:201:28: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
   201 |         } else if(cdl_com==CdlPause) {
       |                            ^~~~~~~~
       |                            CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void cbready(int, unsigned char*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:223:19: error: 'CdlStatRead' was not declared in this scope; did you mean 'cdStRead'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void cbready(int, unsigned char*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:223:19: error: 'CdlStatRead' was not declared in this scope; did you mean 'cdStRead'?
   223 |     if((result[0]&CdlStatRead)&&async_on&&(cdl_com==CdlReadN))
       |                   ^~~~~~~~~~~
       |                   cdStRead
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:223:53: error: 'CdlReadN' was not declared in this scope; did you mean 'CdRead'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:223:53: error: 'CdlReadN' was not declared in this scope; did you mean 'CdRead'?
   223 |     if((result[0]&CdlStatRead)&&async_on&&(cdl_com==CdlReadN))
       |                                                     ^~~~~~~~
       |                                                     CdRead
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:246:25: error: 'CdGetSector' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:246:25: error: 'CdGetSector' was not declared in this scope
   246 |                         CdGetSector((unsigned long *)sectorbuf, 2048/4);
       |                         ^~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:251:25: error: 'CdGetSector' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:251:25: error: 'CdGetSector' was not declared in this scope
   251 |                         CdGetSector((unsigned long *)psxcd_cmd[cur_cmd].pdest, 2048/4);
       |                         ^~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:272:21: error: 'CdGetSector' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:272:21: error: 'CdGetSector' was not declared in this scope
   272 |                     CdGetSector((unsigned long *)sectorbuf, 2048/4);
       |                     ^~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:289:36: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:289:36: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
   289 |                 CdControlF(cdl_com=CdlPause, 0);
       |                                    ^~~~~~~~
       |                                    CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:289:17: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:289:17: error: 'CdControlF' was not declared in this scope
   289 |                 CdControlF(cdl_com=CdlPause, 0);
       |                 ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:297:17: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:297:17: error: 'CdFlush' was not declared in this scope
   297 |                 CdFlush();
       |                 ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:313:18: error: 'CdlStatPlay' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:313:18: error: 'CdlStatPlay' was not declared in this scope
   313 |     if(result[0]&CdlStatPlay/*cdl_com==CdlPlay*/)
       |                  ^~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:335:27: error: 'CdlNop' was not declared in this scope; did you mean 'CdStop'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:335:27: error: 'CdlNop' was not declared in this scope; did you mean 'CdStop'?
   335 |                 cdl_com = CdlNop;
       |                           ^~~~~~
       |                           CdStop
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:345:21: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:345:21: error: 'CdFlush' was not declared in this scope
   345 |                     CdFlush();
       |                     ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_init()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:395:11: error: too few arguments to function 'int sceCdInit(int)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_init()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:395:11: error: too few arguments to function 'int sceCdInit(int)'
   395 |     CdInit();
 C:/msys64/usr/local/ps2dev/ps2sdk/common/include/libcdvd-common.h:636:12: note: declared here
   636 | extern int sceCdInit(int mode);
       |            ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:411:23: error: cannot convert 'sceCdlLOCCD*' to 'u8*' {aka 'unsigned char*'}
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:411:23: error: cannot convert 'sceCdlLOCCD*' to 'u8*' {aka 'unsigned char*'}
   411 |     if((ntoc=CdGetToc(loc)) == 0)
       |                       ^~~
       |                       |
@@ -1742,285 +1742,285 @@ C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:411:23: error: cannot convert '
 C:/msys64/usr/local/ps2dev/ps2sdk/common/include/libcdvd-common.h:398:28: note:   initializing argument 1 of 'int sceCdGetToc(u8*)'
   398 | extern int sceCdGetToc(u8 *toc);
       |                        ~~~~^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:419:49: error: 'CdlCB' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:419:49: error: 'CdlCB' was not declared in this scope
   419 |     cbsyncsave = (unsigned long)CdSyncCallback((CdlCB)cbcomplete);
       |                                                 ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:419:33: error: 'CdSyncCallback' was not declared in this scope; did you mean 'cdSetCallback'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:419:33: error: 'CdSyncCallback' was not declared in this scope; did you mean 'cdSetCallback'?
   419 |     cbsyncsave = (unsigned long)CdSyncCallback((CdlCB)cbcomplete);
       |                                 ^~~~~~~~~~~~~~
       |                                 cdSetCallback
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:420:57: error: expected ')' before 'cbready'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:420:57: error: expected ')' before 'cbready'
   420 |     cbreadysave = (unsigned long)CdReadyCallback((CdlCB)cbready);
       |                                                 ~       ^~~~~~~
       |                                                         )
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:420:34: error: 'CdReadyCallback' was not declared in this scope; did you mean 'cdSetCallback'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:420:34: error: 'CdReadyCallback' was not declared in this scope; did you mean 'cdSetCallback'?
   420 |     cbreadysave = (unsigned long)CdReadyCallback((CdlCB)cbready);
       |                                  ^~~~~~~~~~~~~~~
       |                                  cdSetCallback
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_exit()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:432:5: error: 'CdSyncCallback' was not declared in this scope; did you mean 'cdSetCallback'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_exit()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:432:5: error: 'CdSyncCallback' was not declared in this scope; did you mean 'cdSetCallback'?
   432 |     CdSyncCallback((void *)cbsyncsave);
       |     ^~~~~~~~~~~~~~
       |     cdSetCallback
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:433:5: error: 'CdReadyCallback' was not declared in this scope; did you mean 'cdSetCallback'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:433:5: error: 'CdReadyCallback' was not declared in this scope; did you mean 'cdSetCallback'?
   433 |     CdReadyCallback((void *)cbreadysave);
       |     ^~~~~~~~~~~~~~~
       |     cdSetCallback
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_set_data_mode()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:461:23: error: 'CdlModeSpeed' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_set_data_mode()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:461:23: error: 'CdlModeSpeed' was not declared in this scope
   461 |         cd_param[0] = CdlModeSpeed;  //|CdlModeRept not necessary
       |                       ^~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:463:27: error: 'CdlSetmode' was not declared in this scope; did you mean 'cdl_insetmode'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:463:27: error: 'CdlSetmode' was not declared in this scope; did you mean 'cdl_insetmode'?
   463 |         CdControl(cdl_com=CdlSetmode, cd_param, 0);
       |                           ^~~~~~~~~~
       |                           cdl_insetmode
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:463:9: error: 'CdControl' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:463:9: error: 'CdControl' was not declared in this scope
   463 |         CdControl(cdl_com=CdlSetmode, cd_param, 0);
       |         ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:473:27: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:473:27: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
   473 |         CdControl(cdl_com=CdlPause, 0, 0);
       |                           ^~~~~~~~
       |                           CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:477:9: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:477:9: error: 'CdFlush' was not declared in this scope
   477 |         CdFlush();
       |         ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:485:21: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:485:21: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
   485 |         if(cdl_com!=CdlPause)
       |                     ^~~~~~~~
       |                     CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:488:13: error: 'CdControl' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:488:13: error: 'CdControl' was not declared in this scope
   488 |             CdControl(cdl_com=CdlPause, 0, 0);
       |             ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:493:9: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:493:9: error: 'CdFlush' was not declared in this scope
   493 |         CdFlush();
       |         ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'PsxCd_File* psxcd_open(char*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:509:59: error: 'struct sceCdlFILE' has no member named 'pos'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'PsxCd_File* psxcd_open(char*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:509:59: error: 'struct sceCdlFILE' has no member named 'pos'
   509 |       CdIntToPos(cdmaptbl[(int)filename].abs,&cdfile.file.pos);
       |                                                           ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:511:39: error: 'struct sceCdlFILE' has no member named 'pos'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:511:39: error: 'struct sceCdlFILE' has no member named 'pos'
   511 |       cdfile.new_io_loc = cdfile.file.pos;
       |                                       ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'int psxcd_async_on()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:582:28: error: too many arguments to function 'int sceCdSync(int)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'int psxcd_async_on()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:582:28: error: too many arguments to function 'int sceCdSync(int)'
   582 |         check_intr = CdSync(1,(unsigned char *)check_result);
 C:/msys64/usr/local/ps2dev/ps2sdk/common/include/libcdvd-common.h:643:12: note: declared here
   643 | extern int sceCdSync(int mode);
       |            ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:586:32: error: 'CdlStatStandby' was not declared in this scope; did you mean 'CdStandby'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:586:32: error: 'CdlStatStandby' was not declared in this scope; did you mean 'CdStandby'?
   586 |            !(check_result[0] & CdlStatStandby))
       |                                ^~~~~~~~~~~~~~
       |                                CdStandby
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:588:13: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:588:13: error: 'CdFlush' was not declared in this scope
   588 |             CdFlush();
       |             ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'int psxcd_seeking_for_play()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:613:28: error: too many arguments to function 'int sceCdSync(int)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'int psxcd_seeking_for_play()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:613:28: error: too many arguments to function 'int sceCdSync(int)'
   613 |         check_intr = CdSync(1,(unsigned char *)check_result);
 C:/msys64/usr/local/ps2dev/ps2sdk/common/include/libcdvd-common.h:643:12: note: declared here
   643 | extern int sceCdSync(int mode);
       |            ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:616:32: error: 'CdlStatStandby' was not declared in this scope; did you mean 'CdStandby'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:616:32: error: 'CdlStatStandby' was not declared in this scope; did you mean 'CdStandby'?
   616 |            !(check_result[0] & CdlStatStandby))
       |                                ^~~~~~~~~~~~~~
       |                                CdStandby
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:618:13: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:618:13: error: 'CdFlush' was not declared in this scope
   618 |             CdFlush();
       |             ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:627:32: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:627:32: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
   627 |             CdControlF(cdl_com=CdlSeekP, (unsigned char *)&lastloc);
       |                                ^~~~~~~~
       |                                CdSeek
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:627:13: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:627:13: error: 'CdControlF' was not declared in this scope
   627 |             CdControlF(cdl_com=CdlSeekP, (unsigned char *)&lastloc);
       |             ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'int psxcd_waiting_for_pause()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:643:28: error: too many arguments to function 'int sceCdSync(int)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'int psxcd_waiting_for_pause()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:643:28: error: too many arguments to function 'int sceCdSync(int)'
   643 |         check_intr = CdSync(1,(unsigned char *)check_result);
 C:/msys64/usr/local/ps2dev/ps2sdk/common/include/libcdvd-common.h:643:12: note: declared here
   643 | extern int sceCdSync(int mode);
       |            ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:646:32: error: 'CdlStatStandby' was not declared in this scope; did you mean 'CdStandby'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:646:32: error: 'CdlStatStandby' was not declared in this scope; did you mean 'CdStandby'?
   646 |            !(check_result[0] & CdlStatStandby))
       |                                ^~~~~~~~~~~~~~
       |                                CdStandby
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:648:13: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:648:13: error: 'CdFlush' was not declared in this scope
   648 |             CdFlush();
       |             ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:657:32: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:657:32: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
   657 |             CdControlF(cdl_com=CdlPause, 0);
       |                                ^~~~~~~~
       |                                CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:657:13: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:657:13: error: 'CdControlF' was not declared in this scope
   657 |             CdControlF(cdl_com=CdlPause, 0);
       |             ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_async_read_cancel()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:691:28: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_async_read_cancel()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:691:28: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
   691 |         CdControlF(cdl_com=CdlPause, 0);
       |                            ^~~~~~~~
       |                            CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:691:9: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:691:9: error: 'CdControlF' was not declared in this scope
   691 |         CdControlF(cdl_com=CdlPause, 0);
       |         ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'int psxcd_async_read(void*, int, PsxCd_File*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:710:31: error: 'struct sceCdlFILE' has no member named 'pos'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'int psxcd_async_read(void*, int, PsxCd_File*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:710:31: error: 'struct sceCdlFILE' has no member named 'pos'
   710 |     if(*(int *)&fileptr->file.pos==0)
       |                               ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:873:31: error: 'CdlSetloc' was not declared in this scope; did you mean 'CdGetToc'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:873:31: error: 'CdlSetloc' was not declared in this scope; did you mean 'CdGetToc'?
   873 |             CdControl(cdl_com=CdlSetloc,
       |                               ^~~~~~~~~
       |                               CdGetToc
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:873:13: error: 'CdControl' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:873:13: error: 'CdControl' was not declared in this scope
   873 |             CdControl(cdl_com=CdlSetloc,
       |             ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:893:35: error: 'CdlReadN' was not declared in this scope; did you mean 'CdRead'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:893:35: error: 'CdlReadN' was not declared in this scope; did you mean 'CdRead'?
   893 |                 CdControl(cdl_com=CdlReadN,
       |                                   ^~~~~~~~
       |                                   CdRead
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:893:17: error: 'CdControl' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:893:17: error: 'CdControl' was not declared in this scope
   893 |                 CdControl(cdl_com=CdlReadN,
       |                 ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'int psxcd_seek(PsxCd_File*, int, int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:932:31: error: 'struct sceCdlFILE' has no member named 'pos'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'int psxcd_seek(PsxCd_File*, int, int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:932:31: error: 'struct sceCdlFILE' has no member named 'pos'
   932 |     if(*(int *)&fileptr->file.pos==0)
       |                               ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:939:83: error: 'struct sceCdlFILE' has no member named 'pos'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:939:83: error: 'struct sceCdlFILE' has no member named 'pos'
   939 |         sector_index = (seekpos / CD_ROM_SECTOR_SIZE) + CdPosToInt(&fileptr->file.pos);
       |                                                                                   ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:951:104: error: 'struct sceCdlFILE' has no member named 'pos'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:951:104: error: 'struct sceCdlFILE' has no member named 'pos'
   951 |         sector_index = ((fileptr->file.size-seekpos) / CD_ROM_SECTOR_SIZE) + CdPosToInt(&fileptr->file.pos);
       |                                                                                                        ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'long unsigned int psxcd_tell(PsxCd_File*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:969:31: error: 'struct sceCdlFILE' has no member named 'pos'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'long unsigned int psxcd_tell(PsxCd_File*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:969:31: error: 'struct sceCdlFILE' has no member named 'pos'
   969 |     if(*(int *)&fileptr->file.pos==0)
       |                               ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:974:81: error: 'struct sceCdlFILE' has no member named 'pos'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:974:81: error: 'struct sceCdlFILE' has no member named 'pos'
   974 |     sector_index = CdPosToInt(&fileptr->new_io_loc) - CdPosToInt(&fileptr->file.pos);
       |                                                                                 ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_close(PsxCd_File*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:982:30: warning: unused parameter 'fileptr' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_close(PsxCd_File*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:982:30: warning: unused parameter 'fileptr' [-Wunused-parameter]
   982 | void psxcd_close(PsxCd_File *fileptr)//800405A0
       |                  ~~~~~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_set_audio_mode()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1000:23: error: 'CdlModeRept' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_set_audio_mode()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1000:23: error: 'CdlModeRept' was not declared in this scope
  1000 |         cd_param[0] = CdlModeRept|CdlModeAP|CdlModeDA;
       |                       ^~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1000:35: error: 'CdlModeAP' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1000:35: error: 'CdlModeAP' was not declared in this scope
  1000 |         cd_param[0] = CdlModeRept|CdlModeAP|CdlModeDA;
       |                                   ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1000:45: error: 'CdlModeDA' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1000:45: error: 'CdlModeDA' was not declared in this scope
  1000 |         cd_param[0] = CdlModeRept|CdlModeAP|CdlModeDA;
       |                                             ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1002:27: error: 'CdlSetmode' was not declared in this scope; did you mean 'cdl_insetmode'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1002:27: error: 'CdlSetmode' was not declared in this scope; did you mean 'cdl_insetmode'?
  1002 |         CdControl(cdl_com=CdlSetmode, cd_param, 0);
       |                           ^~~~~~~~~~
       |                           cdl_insetmode
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1002:9: error: 'CdControl' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1002:9: error: 'CdControl' was not declared in this scope
  1002 |         CdControl(cdl_com=CdlSetmode, cd_param, 0);
       |         ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1008:27: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1008:27: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
  1008 |         CdControl(cdl_com=CdlPause, 0, 0);
       |                           ^~~~~~~~
       |                           CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1012:9: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1012:9: error: 'CdFlush' was not declared in this scope
  1012 |         CdFlush();
       |         ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_play_at_andloop(int, int, int, int, int, int, int, int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1057:24: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_play_at_andloop(int, int, int, int, int, int, int, int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1057:24: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
  1057 |     CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
       |                        ^~~~~~~~
       |                        CdSeek
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1057:5: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1057:5: error: 'CdControlF' was not declared in this scope
  1057 |     CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
       |     ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_play_at(int, int, int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1091:24: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_play_at(int, int, int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1091:24: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
  1091 |     CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
       |                        ^~~~~~~~
       |                        CdSeek
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1091:5: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1091:5: error: 'CdControlF' was not declared in this scope
  1091 |     CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
       |     ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_seek_for_play_at(int, int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1126:24: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_seek_for_play_at(int, int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1126:24: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
  1126 |     CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
       |                        ^~~~~~~~
       |                        CdSeek
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1126:5: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1126:5: error: 'CdControlF' was not declared in this scope
  1126 |     CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
       |     ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'int psxcd_play_status()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1143:18: error: 'CdlPlay' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'int psxcd_play_status()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1143:18: error: 'CdlPlay' was not declared in this scope
  1143 |     if((cdl_com==CdlPlay)||(cdl_com==CdlSeekP))
       |                  ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1143:38: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1143:38: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
  1143 |     if((cdl_com==CdlPlay)||(cdl_com==CdlSeekP))
       |                                      ^~~~~~~~
       |                                      CdSeek
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1145:28: error: too many arguments to function 'int sceCdSync(int)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1145:28: error: too many arguments to function 'int sceCdSync(int)'
  1145 |         check_intr = CdSync(1,(unsigned char *)check_result);
 C:/msys64/usr/local/ps2dev/ps2sdk/common/include/libcdvd-common.h:643:12: note: declared here
   643 | extern int sceCdSync(int mode);
       |            ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1148:32: error: 'CdlStatStandby' was not declared in this scope; did you mean 'CdStandby'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1148:32: error: 'CdlStatStandby' was not declared in this scope; did you mean 'CdStandby'?
  1148 |            !(check_result[0] & CdlStatStandby))
       |                                ^~~~~~~~~~~~~~
       |                                CdStandby
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1150:13: error: 'CdFlush' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1150:13: error: 'CdFlush' was not declared in this scope
  1150 |             CdFlush();
       |             ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_stop()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1191:24: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_stop()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1191:24: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
  1191 |     CdControlF(cdl_com=CdlPause, 0);
       |                        ^~~~~~~~
       |                        CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1191:5: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1191:5: error: 'CdControlF' was not declared in this scope
  1191 |     CdControlF(cdl_com=CdlPause, 0);
       |     ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_pause()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1222:24: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_pause()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1222:24: error: 'CdlPause' was not declared in this scope; did you mean 'CdPause'?
  1222 |     CdControlF(cdl_com=CdlPause, 0);
       |                        ^~~~~~~~
       |                        CdPause
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1222:5: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1222:5: error: 'CdControlF' was not declared in this scope
  1222 |     CdControlF(cdl_com=CdlPause, 0);
       |     ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_restart(int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1245:24: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_restart(int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1245:24: error: 'CdlSeekP' was not declared in this scope; did you mean 'CdSeek'?
  1245 |     CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
       |                        ^~~~~~~~
       |                        CdSeek
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1245:5: error: 'CdControlF' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1245:5: error: 'CdControlF' was not declared in this scope
  1245 |     CdControlF(cdl_com=CdlSeekP, (unsigned char *)&cdloc);
       |     ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'void psxcd_set_stereo(int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1268:9: error: 'cdatv' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'void psxcd_set_stereo(int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1268:9: error: 'cdatv' was not declared in this scope
  1268 |         cdatv.val0 = 127;
       |         ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1273:9: error: 'cdatv' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1273:9: error: 'cdatv' was not declared in this scope
  1273 |         cdatv.val0 = 63;
       |         ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1279:12: error: 'cdatv' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1279:12: error: 'cdatv' was not declared in this scope
  1279 |     CdMix(&cdatv);
       |            ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1279:5: error: 'CdMix' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1279:5: error: 'CdMix' was not declared in this scope
  1279 |     CdMix(&cdatv);
       |     ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: In function 'int psxcd_play_status()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:1166:1: warning: control reaches end of non-void function [-Wreturn-type]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: In function 'int psxcd_play_status()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:1166:1: warning: control reaches end of non-void function [-Wreturn-type]
  1166 | }
       | ^
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C: At global scope:
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:217:13: warning: 'void cbready(int, unsigned char*)' defined but not used [-Wunused-function]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP: At global scope:
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:217:13: warning: 'void cbready(int, unsigned char*)' defined but not used [-Wunused-function]
   217 | static void cbready(int intr, unsigned char *result)//8003F200
       |             ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.C:174:13: warning: 'void cbcomplete(int, unsigned char*)' defined but not used [-Wunused-function]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCD.CPP:174:13: warning: 'void cbcomplete(int, unsigned char*)' defined but not used [-Wunused-function]
   174 | static void cbcomplete(int intr, unsigned char *result)//8003F11C
       |             ^~~~~~~~~~
 
-PSXSPU.C:
+PSXSPU.CPP:
 
-In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:5:
+In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:5:
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:237:9: error: 's16' does not name a type
   237 |         s16 left;
       |         ^~~
@@ -2472,56 +2472,56 @@ C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:32: error: 's16' was
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:44: error: 's16' was not declared in this scope
   473 | extern void SpuSetSerialInAttr(s16 dry_on, s16 effect_on);
       |                                            ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C: In function 'void psxspu_init_reverb(long int, short int, short int, long int, long int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:45:20: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP: In function 'void psxspu_init_reverb(long int, short int, short int, long int, long int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:45:20: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
    45 |     rev_attr.depth.left = depthleft;
       |                    ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:46:20: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:46:20: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
    46 |     rev_attr.depth.right = depthright;
       |                    ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C: In function 'void psxspu_set_reverb_depth(short int, short int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:73:20: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP: In function 'void psxspu_set_reverb_depth(short int, short int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:73:20: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
    73 |     rev_attr.depth.left = depthleft;
       |                    ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:74:24: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:74:24: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
    74 |         rev_attr.depth.right = depthright;
       |                        ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C: In function 'void psxspu_init()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:92:17: error: 'SpuSetTransMode' was not declared in this scope; did you mean 'SpuSetTransferMode'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP: In function 'void psxspu_init()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:92:17: error: 'SpuSetTransMode' was not declared in this scope; did you mean 'SpuSetTransferMode'?
    92 |                 SpuSetTransMode(SpuTransferByDMA);
       |                 ^~~~~~~~~~~~~~~
       |                 SpuSetTransferMode
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:97:31: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:97:31: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
    97 |                 com_attr.mvol.left = MAX_MASTER_VOL;
       |                               ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:98:31: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:98:31: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
    98 |                 com_attr.mvol.right = MAX_MASTER_VOL;
       |                               ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:99:36: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:99:36: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
    99 |                 com_attr.cd.volume.left = MAX_CD_VOL;
       |                                    ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:100:36: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:100:36: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   100 |                 com_attr.cd.volume.right = MAX_CD_VOL;
       |                                    ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C: In function 'void psxspu_set_master_volume(int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:113:19: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP: In function 'void psxspu_set_master_volume(int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:113:19: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   113 |     com_attr.mvol.left = vol;
       |                   ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:114:23: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:114:23: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   114 |         com_attr.mvol.right = vol;
       |                       ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C: In function 'void psxspu_set_cd_volume(int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:125:24: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP: In function 'void psxspu_set_cd_volume(int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:125:24: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   125 |     com_attr.cd.volume.left = vol;
       |                        ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.C:126:28: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXSPU.CPP:126:28: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   126 |         com_attr.cd.volume.right = vol;
       |                            ^~~~~
 
-PSXCMD.C:
+PSXCMD.CPP:
 
 In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessseq.h:4,
-                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:5:
+                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:5:
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:237:9: error: 's16' does not name a type
   237 |         s16 left;
       |         ^~~
@@ -2973,506 +2973,506 @@ C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:32: error: 's16' was
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:44: error: 's16' was not declared in this scope
   473 | extern void SpuSetSerialInAttr(s16 dry_on, s16 effect_on);
       |                                            ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(master_status_structure*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(master_status_structure*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(master_status_structure*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:64:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    64 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void TriggerPSXVoice(voice_status*, unsigned char, unsigned char)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:215:44: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void TriggerPSXVoice(voice_status*, unsigned char, unsigned char)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:215:44: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   215 |                         drv_outattr.volume.right = ((drv_volume_1 << 7) * (0x80 - drv_pan_1)) >> 7;
       |                                            ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:216:44: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:216:44: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   216 |                         drv_outattr.volume.left = ((drv_volume_1 << 7) * (drv_pan_1 + 1)) >> 7;
       |                                            ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:220:44: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:220:44: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   220 |                         drv_outattr.volume.left = ((drv_volume_1 << 7) * (0x80 - drv_pan_1)) >> 7;
       |                                            ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:221:44: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:221:44: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   221 |                         drv_outattr.volume.right = ((drv_volume_1 << 7) * (drv_pan_1 + 1)) >> 7;
       |                                            ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:226:36: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:226:36: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   226 |                 drv_outattr.volume.left = drv_outattr.volume.right = drv_volume_1 << 6;
       |                                    ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:226:62: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:226:62: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   226 |                 drv_outattr.volume.left = drv_outattr.volume.right = drv_volume_1 << 6;
       |                                                              ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:232:29: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:232:29: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
   232 |                 drv_outattr.note = (voice_stat->keynum << 8);
       |                             ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:244:37: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:244:37: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
   244 |                         drv_outattr.note = (voice_stat->keynum - (drv_pitch2)) << 8 | drv_pitch3 & 0x7F;
       |                                     ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:244:98: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:244:98: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
   244 |                         drv_outattr.note = (voice_stat->keynum - (drv_pitch2)) << 8 | drv_pitch3 & 0x7F;
       |                                                                                       ~~~~~~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:254:37: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:254:37: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
   254 |                         drv_outattr.note = (voice_stat->keynum + (drv_pitch2)) << 8 | drv_pitch3 & 0x7F;
       |                                     ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:254:98: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:254:98: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
   254 |                         drv_outattr.note = (voice_stat->keynum + (drv_pitch2)) << 8 | drv_pitch3 & 0x7F;
       |                                                                                       ~~~~~~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:258:21: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'sample_note'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:258:21: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'sample_note'
   258 |         drv_outattr.sample_note = (voice_stat->patchmaps->root_key << 8) | voice_stat->patchmaps->fine_adj;
       |                     ^~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:260:21: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'adsr1'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:260:21: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'adsr1'
   260 |         drv_outattr.adsr1 = voice_stat->patchmaps->adsr1;
       |                     ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:261:21: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'adsr2'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:261:21: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'adsr2'
   261 |         drv_outattr.adsr2 = voice_stat->patchmaps->adsr2;
       |                     ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:158:62: warning: unused parameter 'keynum' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:158:62: warning: unused parameter 'keynum' [-Wunused-parameter]
   158 | void TriggerPSXVoice(voice_status *voice_stat, unsigned char keynum, unsigned char velnum)//L8004587C()
       |                                                ~~~~~~~~~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_DriverInit(master_status_structure*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:327:9: error: 'psxspu_init' was not declared in this scope; did you mean 'psxcd_init'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_DriverInit(master_status_structure*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:327:9: error: 'psxspu_init' was not declared in this scope; did you mean 'psxcd_init'?
   327 |         psxspu_init();
       |         ^~~~~~~~~~~
       |         psxcd_init
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_DriverExit(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:337:36: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_DriverExit(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:337:36: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   337 | void PSX_DriverExit (track_status *ptk_stat)//L80045F24()
       |                      ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_DriverEntry1(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:387:29: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'rr'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_DriverEntry1(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:387:29: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'rr'
   387 |                 drv_outattr.rr = release_rate;
       |                             ^~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:351:38: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:351:38: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   351 | void PSX_DriverEntry1 (track_status *ptk_stat)//L80045F44()
       |                        ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_DriverEntry2(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:419:37: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_DriverEntry2(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:419:37: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   419 | void PSX_DriverEntry2(track_status *ptk_stat)//L800461F4()
       |                       ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_DriverEntry3(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:424:37: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_DriverEntry3(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:424:37: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   424 | void PSX_DriverEntry3(track_status *ptk_stat)//L800461FC()
       |                       ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_TrkOff(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:446:27: error: too many arguments to function 'void Eng_TrkOff()'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_TrkOff(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:446:27: error: too many arguments to function 'void Eng_TrkOff()'
   446 |                 Eng_TrkOff(ptk_stat);
       |                 ~~~~~~~~~~^~~~~~~~~~
 C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessseq.h:26:13: note: declared here
    26 | extern void Eng_TrkOff();
       |             ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_TrkMute(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:479:56: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_TrkMute(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:479:56: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
   479 |                 drv_pvs_2->adsr2 = 0x10000000 >> (0x1f - (unsigned int)release_rate & 0x1f);
       |                                                   ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_PatchMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:501:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_PatchMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:501:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   501 | void PSX_PatchMod(track_status *ptk_stat)//L80046494()
       |                   ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_PitchMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:548:41: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_PitchMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:548:41: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
   548 |                             drv_outattr.note = (drv_voice_stat_3->keynum - (drv_pitch_2)) << 8 | drv_pitch_3 & 0x7F;
       |                                         ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:548:110: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:548:110: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
   548 |                             drv_outattr.note = (drv_voice_stat_3->keynum - (drv_pitch_2)) << 8 | drv_pitch_3 & 0x7F;
       |                                                                                                  ~~~~~~~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:558:41: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:558:41: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
   558 |                             drv_outattr.note = (drv_voice_stat_3->keynum + (drv_pitch_2)) << 8 | drv_pitch_3 & 0x7F;
       |                                         ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:558:110: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:558:110: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
   558 |                             drv_outattr.note = (drv_voice_stat_3->keynum + (drv_pitch_2)) << 8 | drv_pitch_3 & 0x7F;
       |                                                                                                  ~~~~~~~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:563:37: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:563:37: error: 'SpuVoiceAttr' {aka 'struct SpuVoiceAttr_'} has no member named 'note'
   563 |                         drv_outattr.note = (drv_voice_stat_3->keynum << 8);
       |                                     ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_ZeroMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:577:32: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_ZeroMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:577:32: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   577 | void PSX_ZeroMod(track_status *ptk_stat)//L800466EC()
       |                  ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_ModuMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:582:32: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_ModuMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:582:32: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   582 | void PSX_ModuMod(track_status *ptk_stat)//L800466f4()
       |                  ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_VolumeMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:639:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_VolumeMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:639:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   639 |                                                 drv_outattr.volume.right = ((drv_volume_2 << 7) * (0x80 - drv_pan_2)) >> 7;
       |                                                                    ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:640:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:640:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   640 |                                                 drv_outattr.volume.left  = ((drv_volume_2 << 7) * (drv_pan_2 + 1)) >> 7;
       |                                                                    ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:644:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:644:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   644 |                                                 drv_outattr.volume.left  = ((drv_volume_2 << 7) * (0x80 - drv_pan_2)) >> 7;
       |                                                                    ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:645:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:645:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   645 |                                                 drv_outattr.volume.right = ((drv_volume_2 << 7) * (drv_pan_2 + 1)) >> 7;
       |                                                                    ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:650:60: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:650:60: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   650 |                                         drv_outattr.volume.left = drv_outattr.volume.right = drv_volume_2 << 6;
       |                                                            ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:650:86: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:650:86: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   650 |                                         drv_outattr.volume.left = drv_outattr.volume.right = drv_volume_2 << 6;
       |                                                                                      ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_PanMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:710:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_PanMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:710:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   710 |                                                 drv_outattr.volume.right = ((drv_volume_3 << 7) * (0x80 - drv_pan_3)) >> 7;
       |                                                                    ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:711:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:711:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   711 |                                                 drv_outattr.volume.left = ((drv_volume_3 << 7) * (drv_pan_3 + 1)) >> 7;
       |                                                                    ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:715:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:715:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'left'
   715 |                                                 drv_outattr.volume.left = ((drv_volume_3 << 7) * (0x80 - drv_pan_3)) >> 7;
       |                                                                    ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:716:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:716:68: error: 'SpuVolume' {aka 'struct SpuVolume_'} has no member named 'right'
   716 |                                                 drv_outattr.volume.right = ((drv_volume_3 << 7) * (drv_pan_3 + 1)) >> 7;
       |                                                                    ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_PedalMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:731:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_PedalMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:731:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   731 | void PSX_PedalMod(track_status *ptk_stat)//L80046CF0()
       |                   ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_ReverbMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:737:34: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_ReverbMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:737:34: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   737 | void PSX_ReverbMod(track_status *ptk_stat)//L80046CF8()
       |                    ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_ChorusMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:743:34: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_ChorusMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:743:34: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   743 | void PSX_ChorusMod(track_status *ptk_stat)//L80046D00()
       |                    ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_voiceon(voice_status*, track_status*, patchmaps_header*, patchinfo_header*, unsigned char, unsigned char)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:773:40: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_voiceon(voice_status*, track_status*, patchmaps_header*, patchinfo_header*, unsigned char, unsigned char)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:773:40: warning: suggest parentheses around '-' in operand of '&' [-Wparentheses]
   773 |     voice_stat->adsr2 = adsr2 >> (0x1f - ((unsigned int)patchmaps->adsr2 & 0x1f) & 0x1f);
       |                                   ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C: In function 'void PSX_voiceparmoff(voice_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.C:794:19: error: too many arguments to function 'void Eng_TrkOff()'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP: In function 'void PSX_voiceparmoff(voice_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/PSXCMD.CPP:794:19: error: too many arguments to function 'void Eng_TrkOff()'
   794 |         Eng_TrkOff(drv_ptrk_stat_1);
       |         ~~~~~~~~~~^~~~~~~~~~~~~~~~~
 C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessseq.h:26:13: note: declared here
    26 | extern void Eng_TrkOff();
       |             ^~~~~~~~~~
 
-WESSAPIP.C:
+WESSAPIP.CPP:
 
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C: In function 'void wess_seq_pause(int, MuteFlag)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C:70:14: error: 'Is_Seq_Num_Valid' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP: In function 'void wess_seq_pause(int, MuteFlag)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP:70:14: error: 'Is_Seq_Num_Valid' was not declared in this scope
    70 |         if (!Is_Seq_Num_Valid(sequence_number))
       |              ^~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C:96:61: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP:96:61: warning: comparison is always true due to limited range of data type [-Wtype-limits]
    96 |                                                 if (*lpdest != 0xFF)
       |                                                     ~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C: In function 'void wess_seq_restart(int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C:129:14: error: 'Is_Seq_Num_Valid' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP: In function 'void wess_seq_restart(int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP:129:14: error: 'Is_Seq_Num_Valid' was not declared in this scope
   129 |         if (!Is_Seq_Num_Valid(sequence_number))
       |              ^~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C:155:61: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP:155:61: warning: comparison is always true due to limited range of data type [-Wtype-limits]
   155 |                                                 if (*lpdest != 0xFF)
       |                                                     ~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C: In function 'void wess_seq_pauseall(MuteFlag, NoteState*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C:184:14: error: 'Is_Module_Loaded' was not declared in this scope; did you mean 'module_loaded'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP: In function 'void wess_seq_pauseall(MuteFlag, NoteState*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP:184:14: error: 'Is_Module_Loaded' was not declared in this scope; did you mean 'module_loaded'?
   184 |         if (!Is_Module_Loaded())
       |              ^~~~~~~~~~~~~~~~
       |              module_loaded
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C:214:53: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP:214:53: warning: comparison is always true due to limited range of data type [-Wtype-limits]
   214 |                                         if (*lpdest != 0xFF)
       |                                             ~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C: In function 'void wess_seq_restartall(NoteState*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C:253:14: error: 'Is_Module_Loaded' was not declared in this scope; did you mean 'module_loaded'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP: In function 'void wess_seq_restartall(NoteState*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP:253:14: error: 'Is_Module_Loaded' was not declared in this scope; did you mean 'module_loaded'?
   253 |         if (!Is_Module_Loaded())
       |              ^~~~~~~~~~~~~~~~
       |              module_loaded
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C:277:53: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP:277:53: warning: comparison is always true due to limited range of data type [-Wtype-limits]
   277 |                                         if (*lpdest != 0xFF)
       |                                             ~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.C:290:81: error: 'PSX_voicenote' was not declared in this scope; did you mean 'SpuSetVoiceNote'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIP.CPP:290:81: error: 'PSX_voicenote' was not declared in this scope; did you mean 'SpuSetVoiceNote'?
   290 |                                                                                 PSX_voicenote(ptmp,
       |                                                                                 ^~~~~~~~~~~~~
       |                                                                                 SpuSetVoiceNote
 
-WESSAPI.C:
+WESSAPI.CPP:
 
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C: In function 'void module_memcpy(void*, void*, long unsigned int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:259:18: warning: ISO C++ forbids incrementing a pointer of type 'void*' [-Wpointer-arith]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP: In function 'void module_memcpy(void*, void*, long unsigned int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:259:18: warning: ISO C++ forbids incrementing a pointer of type 'void*' [-Wpointer-arith]
   259 |         *(char *)pdest++ = *(char *)psrc++;
       |                  ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:259:37: warning: ISO C++ forbids incrementing a pointer of type 'void*' [-Wpointer-arith]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:259:37: warning: ISO C++ forbids incrementing a pointer of type 'void*' [-Wpointer-arith]
   259 |         *(char *)pdest++ = *(char *)psrc++;
       |                                     ^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C: In function 'int wess_load_module(void*, char*, int, int**)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:307:19: error: invalid conversion from 'void*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP: In function 'int wess_load_module(void*, char*, int, int**)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:307:19: error: invalid conversion from 'void*' to 'char*' [-fpermissive]
   307 |         tempwmd = wmd_ptr;
       |                   ^~~~~~~
       |                   |
       |                   void*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:314:18: error: 'get_num_Wess_Sound_Drivers' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:314:18: error: 'get_num_Wess_Sound_Drivers' was not declared in this scope
   314 |         num_sd = get_num_Wess_Sound_Drivers(settings_tag_lists);
       |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:511:54: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:511:54: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
   511 |                                         flag = (flag & 1 | setting) & 1;
       |                                                 ~~~~~^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:520:60: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:520:60: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
   520 |                                         flag = ((flag >> 1 & 1 | setting) & 1) << 1;
       |                                                  ~~~~~~~~~~^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:529:60: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:529:60: warning: suggest parentheses around arithmetic in operand of '|' [-Wparentheses]
   529 |                                         flag = ((flag >> 2 & 1 | setting) & 1) << 2;
       |                                                  ~~~~~~~~~~^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:298:26: warning: unused variable 'readresult' [-Wunused-variable]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:298:26: warning: unused variable 'readresult' [-Wunused-variable]
   298 |         int readrequest, readresult;
       |                          ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C: In function 'void assigntrackstat(track_status*, track_data*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:1175:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP: In function 'void assigntrackstat(track_status*, track_data*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:1175:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
  1175 |     ptk_stat->pstart = ptk_info->ptrk_data;
       |                        ~~~~~~~~~~^~~~~~~~~
       |                                  |
       |                                  char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:1176:41: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:1176:41: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
  1176 |     ptk_stat->ppos = Read_Vlq(ptk_stat->pstart,&ptk_stat->deltatime);
       |                               ~~~~~~~~~~^~~~~~
       |                                         |
       |                                         unsigned char*
-In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:18:
+In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:18:
 C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessseq.h:13:29: note:   initializing argument 1 of 'char* Read_Vlq(char*, void*)'
    13 | extern char *Read_Vlq(char *pstart, void *deltatime);
       |                       ~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:1176:30: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:1176:30: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
  1176 |     ptk_stat->ppos = Read_Vlq(ptk_stat->pstart,&ptk_stat->deltatime);
       |                      ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                              |
       |                              char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C: In function 'void wess_seq_stop(int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:1422:61: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP: In function 'void wess_seq_stop(int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:1422:61: warning: comparison is always true due to limited range of data type [-Wtype-limits]
  1422 |                                                 if (*lpdest != 0xFF)
       |                                                     ~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C: In function 'void wess_seq_stopall()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.C:1475:53: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP: In function 'void wess_seq_stopall()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPI.CPP:1475:53: warning: comparison is always true due to limited range of data type [-Wtype-limits]
  1475 |                                         if (*lpdest != 0xFF)
       |                                             ~~~~~~~~^~~~~~~
-WESSARC.C:
+WESSARC.CPP:
 
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:37:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:37:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    37 |     DrvFunctions,
       |     ^~~~~~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:38:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:38:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    38 |     drv_cmds,
       |     ^~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:39:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:39:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    39 |     DrvFunctions,
       |     ^~~~~~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:40:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:40:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    40 |     DrvFunctions,
       |     ^~~~~~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:41:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:41:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    41 |     DrvFunctions,
       |     ^~~~~~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:42:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:42:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    42 |     DrvFunctions,
       |     ^~~~~~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:43:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:43:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    43 |     DrvFunctions,
       |     ^~~~~~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:44:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:44:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    44 |     DrvFunctions,
       |     ^~~~~~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:45:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:45:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    45 |     DrvFunctions,
       |     ^~~~~~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:46:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:46:5: error: invalid conversion from 'void (**)()' to 'void (**)(track_status*)' [-fpermissive]
    46 |     DrvFunctions
       |     ^~~~~~~~~~~~
       |     |
       |     void (**)()
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'void wess_low_level_init()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:97:5: error: 'psxspu_init' was not declared in this scope; did you mean 'psxcd_init'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'void wess_low_level_init()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:97:5: error: 'psxspu_init' was not declared in this scope; did you mean 'psxcd_init'?
    97 |     psxspu_init();
       |     ^~~~~~~~~~~
       |     psxcd_init
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'void* wess_malloc(int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:105:23: warning: unused parameter 'size' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'void* wess_malloc(int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:105:23: warning: unused parameter 'size' [-Wunused-parameter]
   105 | void *wess_malloc(int size)//80043890
       |                   ~~~~^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'void wess_free(char*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:110:22: warning: unused parameter 'mem' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'void wess_free(char*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:110:22: warning: unused parameter 'mem' [-Wunused-parameter]
   110 | void wess_free(char *mem)//80043898
       |                ~~~~~~^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'long int WessInterruptHandler()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:140:5: error: 'psxspu_fadeengine' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'long int WessInterruptHandler()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:140:5: error: 'psxspu_fadeengine' was not declared in this scope
   140 |     psxspu_fadeengine();
       |     ^~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'void init_WessTimer()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:154:9: error: 'EnterCriticalSection' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'void init_WessTimer()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:154:9: error: 'EnterCriticalSection' was not declared in this scope
   154 |         EnterCriticalSection();
       |         ^~~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:156:25: error: 'RCntCNT2' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:156:25: error: 'RCntCNT2' was not declared in this scope
   156 |         EV2 = OpenEvent(RCntCNT2, EvSpINT, EvMdINTR, WessInterruptHandler);
       |                         ^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:156:35: error: 'EvSpINT' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:156:35: error: 'EvSpINT' was not declared in this scope
   156 |         EV2 = OpenEvent(RCntCNT2, EvSpINT, EvMdINTR, WessInterruptHandler);
       |                                   ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:156:44: error: 'EvMdINTR' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:156:44: error: 'EvMdINTR' was not declared in this scope
   156 |         EV2 = OpenEvent(RCntCNT2, EvSpINT, EvMdINTR, WessInterruptHandler);
       |                                            ^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:156:15: error: 'OpenEvent' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:156:15: error: 'OpenEvent' was not declared in this scope
   156 |         EV2 = OpenEvent(RCntCNT2, EvSpINT, EvMdINTR, WessInterruptHandler);
       |               ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:157:9: error: 'EnableEvent' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:157:9: error: 'EnableEvent' was not declared in this scope
   157 |         EnableEvent(EV2);
       |         ^~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:158:34: error: 'RCntMdINTR' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:158:34: error: 'RCntMdINTR' was not declared in this scope
   158 |         SetRCnt(RCntCNT2, 34722, RCntMdINTR);   // 33038 is ~120 Hz
       |                                  ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:158:9: error: 'SetRCnt' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:158:9: error: 'SetRCnt' was not declared in this scope
   158 |         SetRCnt(RCntCNT2, 34722, RCntMdINTR);   // 33038 is ~120 Hz
       |         ^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:159:9: error: 'StartRCnt' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:159:9: error: 'StartRCnt' was not declared in this scope
   159 |         StartRCnt(RCntCNT2);
       |         ^~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:163:9: error: 'ExitCriticalSection' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:163:9: error: 'ExitCriticalSection' was not declared in this scope
   163 |         ExitCriticalSection();
       |         ^~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'void exit_WessTimer()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:168:27: error: 'psxspu_get_master_vol' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'void exit_WessTimer()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:168:27: error: 'psxspu_get_master_vol' was not declared in this scope
   168 |     psxspu_set_master_vol(psxspu_get_master_vol());
       |                           ^~~~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:168:5: error: 'psxspu_set_master_vol' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:168:5: error: 'psxspu_set_master_vol' was not declared in this scope
   168 |     psxspu_set_master_vol(psxspu_get_master_vol());
       |     ^~~~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:169:27: error: 'psxspu_get_cd_vol' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:169:27: error: 'psxspu_get_cd_vol' was not declared in this scope
   169 |         psxspu_set_cd_vol(psxspu_get_cd_vol());
       |                           ^~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:169:9: error: 'psxspu_set_cd_vol' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:169:9: error: 'psxspu_set_cd_vol' was not declared in this scope
   169 |         psxspu_set_cd_vol(psxspu_get_cd_vol());
       |         ^~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:171:9: error: 'EnterCriticalSection' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:171:9: error: 'EnterCriticalSection' was not declared in this scope
   171 |         EnterCriticalSection();
       |         ^~~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:175:5: error: 'DisableEvent' was not declared in this scope; did you mean 'DisableIntc'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:175:5: error: 'DisableEvent' was not declared in this scope; did you mean 'DisableIntc'?
   175 |     DisableEvent(EV2);
       |     ^~~~~~~~~~~~
       |     DisableIntc
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:176:5: error: 'CloseEvent' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:176:5: error: 'CloseEvent' was not declared in this scope
   176 |     CloseEvent(EV2);
       |     ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:178:5: error: 'ExitCriticalSection' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:178:5: error: 'ExitCriticalSection' was not declared in this scope
   178 |     ExitCriticalSection();
       |     ^~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'int Wess_init_for_LoadFileData(char*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:183:38: warning: unused parameter 'filename' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'int Wess_init_for_LoadFileData(char*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:183:38: warning: unused parameter 'filename' [-Wunused-parameter]
   183 | int Wess_init_for_LoadFileData(char *filename)//80043A88
       |                                ~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'int get_num_Wess_Sound_Drivers(int**)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:228:38: warning: unused parameter 'settings_tag_lists' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'int get_num_Wess_Sound_Drivers(int**)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:228:38: warning: unused parameter 'settings_tag_lists' [-Wunused-parameter]
   228 | int get_num_Wess_Sound_Drivers(int **settings_tag_lists)//80043B84
       |                                ~~~~~~^~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'void data_read_chunk(Wess_Data_IO_Struct*, int, long unsigned int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:253:26: error: invalid conversion from 'char*' to 'u8*' {aka 'unsigned char*'} [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'void data_read_chunk(Wess_Data_IO_Struct*, int, long unsigned int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:253:26: error: invalid conversion from 'char*' to 'u8*' {aka 'unsigned char*'} [-fpermissive]
   253 |                 SpuWrite(chunk, totaltogo);
       |                          ^~~~~
       |                          |
       |                          char*
-In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:21:
+In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:21:
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:380:34: note:   initializing argument 1 of 'unsigned int SpuWrite(u8*, unsigned int)'
   380 | extern unsigned int SpuWrite(u8 *addr, unsigned int size);
       |                              ~~~~^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:264:34: error: invalid conversion from 'char*' to 'u8*' {aka 'unsigned char*'} [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:264:34: error: invalid conversion from 'char*' to 'u8*' {aka 'unsigned char*'} [-fpermissive]
   264 |                         SpuWrite(chunk2, totaltogo);
       |                                  ^~~~~~
       |                                  |
@@ -3480,7 +3480,7 @@ C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:264:34: error: invalid conver
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:380:34: note:   initializing argument 1 of 'unsigned int SpuWrite(u8*, unsigned int)'
   380 | extern unsigned int SpuWrite(u8 *addr, unsigned int size);
       |                              ~~~~^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:272:34: error: invalid conversion from 'char*' to 'u8*' {aka 'unsigned char*'} [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:272:34: error: invalid conversion from 'char*' to 'u8*' {aka 'unsigned char*'} [-fpermissive]
   272 |                         SpuWrite(chunk, totaltogo);
       |                                  ^~~~~
       |                                  |
@@ -3488,109 +3488,109 @@ C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:272:34: error: invalid conver
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:380:34: note:   initializing argument 1 of 'unsigned int SpuWrite(u8*, unsigned int)'
   380 | extern unsigned int SpuWrite(u8 *addr, unsigned int size);
       |                              ~~~~^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: In function 'int data_read(Wess_Data_IO_Struct*, void*, int, int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:286:36: warning: comparison of integer expressions of different signedness: 'long unsigned int' and 'int' [-Wsign-compare]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: In function 'int data_read(Wess_Data_IO_Struct*, void*, int, int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:286:36: warning: comparison of integer expressions of different signedness: 'long unsigned int' and 'int' [-Wsign-compare]
   286 |         if ((end_of_sram - spuptr) < readbytes)
       |             ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C: At global scope:
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.C:127:13: warning: 'long int WessInterruptHandler()' defined but not used [-Wunused-function]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP: At global scope:
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSARC.CPP:127:13: warning: 'long int WessInterruptHandler()' defined but not used [-Wunused-function]
   127 | static long WessInterruptHandler(void)//800438F8
       |             ^~~~~~~~~~~~~~~~~~~~
 
-WESSAPIT.C:
+WESSAPIT.CPP:
 
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C: In function 'void updatetrackstat(track_status*, TriggerPlayAttr*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:56:34: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP: In function 'void updatetrackstat(track_status*, TriggerPlayAttr*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:56:34: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
    56 |                 temp = ptk_stat->ppos; //copy
       |                        ~~~~~~~~~~^~~~
       |                                  |
       |                                  unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:57:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:57:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
    57 |                 ptk_stat->ppos = action;  //action
       |                                  ^~~~~~
       |                                  |
       |                                  char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:61:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:61:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
    61 |                 ptk_stat->ppos = temp; //restore
       |                                  ^~~~
       |                                  |
       |                                  char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:69:42: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:69:42: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
    69 |                         temp = ptk_stat->ppos; //copy
       |                                ~~~~~~~~~~^~~~
       |                                          |
       |                                          unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:70:42: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:70:42: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
    70 |                         ptk_stat->ppos = action;  //action
       |                                          ^~~~~~
       |                                          |
       |                                          char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:74:42: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:74:42: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
    74 |                         ptk_stat->ppos = temp; //restore
       |                                          ^~~~
       |                                          |
       |                                          char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:80:42: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:80:42: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
    80 |                         temp = ptk_stat->ppos; //copy
       |                                ~~~~~~~~~~^~~~
       |                                          |
       |                                          unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:81:42: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:81:42: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
    81 |                         ptk_stat->ppos = action;  //action
       |                                          ^~~~~~
       |                                          |
       |                                          char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:85:42: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:85:42: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
    85 |                         ptk_stat->ppos = temp; //restore
       |                                          ^~~~
       |                                          |
       |                                          char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:98:34: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:98:34: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
    98 |                 temp = ptk_stat->ppos; //copy
       |                        ~~~~~~~~~~^~~~
       |                                  |
       |                                  unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:99:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:99:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
    99 |                 ptk_stat->ppos = action;  //action
       |                                  ^~~~~~
       |                                  |
       |                                  char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:104:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:104:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   104 |                 ptk_stat->ppos = temp; //restore
       |                                  ^~~~
       |                                  |
       |                                  char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C: In function 'void wess_seq_trigger_type(int, long unsigned int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:146:5: error: 'wess_seq_structrig' was not declared in this scope; did you mean 'wess_seq_stoptype'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP: In function 'void wess_seq_trigger_type(int, long unsigned int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:146:5: error: 'wess_seq_structrig' was not declared in this scope; did you mean 'wess_seq_stoptype'?
   146 |     wess_seq_structrig (psq_info, seq_num, seq_type, NoHandle, NULL);
       |     ^~~~~~~~~~~~~~~~~~
       |     wess_seq_stoptype
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C: In function 'void wess_seq_trigger_type_special(int, long unsigned int, TriggerPlayAttr*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:160:5: error: 'wess_seq_structrig' was not declared in this scope; did you mean 'wess_seq_stoptype'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP: In function 'void wess_seq_trigger_type_special(int, long unsigned int, TriggerPlayAttr*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:160:5: error: 'wess_seq_structrig' was not declared in this scope; did you mean 'wess_seq_stoptype'?
   160 |     wess_seq_structrig (psq_info, seq_num, seq_type, NoHandle, attr);
       |     ^~~~~~~~~~~~~~~~~~
       |     wess_seq_stoptype
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C: In function 'void wess_seq_update_type_special(long unsigned int, TriggerPlayAttr*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:175:14: error: 'Is_Module_Loaded' was not declared in this scope; did you mean 'module_loaded'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP: In function 'void wess_seq_update_type_special(long unsigned int, TriggerPlayAttr*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:175:14: error: 'Is_Module_Loaded' was not declared in this scope; did you mean 'module_loaded'?
   175 |         if (!Is_Module_Loaded())
       |              ^~~~~~~~~~~~~~~~
       |              module_loaded
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:200:61: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:200:61: warning: comparison is always true due to limited range of data type [-Wtype-limits]
   200 |                                                 if (*lpdest != 0xFF)
       |                                                     ~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C: In function 'void wess_seq_stoptype(long unsigned int)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:233:9: error: 'Is_Module_Loaded' was not declared in this scope; did you mean 'module_loaded'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP: In function 'void wess_seq_stoptype(long unsigned int)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:233:9: error: 'Is_Module_Loaded' was not declared in this scope; did you mean 'module_loaded'?
   233 |     if(!Is_Module_Loaded())
       |         ^~~~~~~~~~~~~~~~
       |         module_loaded
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.C:258:35: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIT.CPP:258:35: warning: comparison is always true due to limited range of data type [-Wtype-limits]
   258 |                         if(*lpdest!=0xFF)
       |                            ~~~~~~~^~~~~~
 
-WESSSEQ.C:
+WESSSEQ.CPP:
 
 In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessseq.h:4,
-                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:5:
+                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:5:
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:237:9: error: 's16' does not name a type
   237 |         s16 left;
       |         ^~~
@@ -4042,412 +4042,412 @@ C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:32: error: 's16' was
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:44: error: 's16' was not declared in this scope
   473 | extern void SpuSetSerialInAttr(s16 dry_on, s16 effect_on);
       |                                            ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(master_status_structure*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(master_status_structure*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(master_status_structure*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:90:1: error: invalid conversion from 'void (*)(track_status*)' to 'void (*)()' [-fpermissive]
    90 | };
       | ^
       | |
       | void (*)(track_status*)
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_DriverExit(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:208:36: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_DriverExit(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:208:36: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   208 | void Eng_DriverExit (track_status *ptk_stat)//L80047554()
       |                      ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_DriverEntry1(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:213:38: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_DriverEntry1(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:213:38: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   213 | void Eng_DriverEntry1 (track_status *ptk_stat)//L8004755C()
       |                        ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_DriverEntry2(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:218:38: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_DriverEntry2(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:218:38: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   218 | void Eng_DriverEntry2 (track_status *ptk_stat)//L80047564()
       |                        ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_DriverEntry3(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:223:38: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_DriverEntry3(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:223:38: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   223 | void Eng_DriverEntry3 (track_status *ptk_stat)//L8004756C()
       |                        ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_TrkMute(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:281:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_TrkMute(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:281:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   281 | void Eng_TrkMute (track_status *ptk_stat)//L80047720()
       |                   ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_PatchMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:296:34: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_PatchMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:296:34: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   296 | void Eng_PatchMod (track_status *ptk_stat)//L80047750()
       |                    ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_ZeroMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:310:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_ZeroMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:310:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   310 | void Eng_ZeroMod (track_status *ptk_stat)//L80047780()
       |                   ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_ModuMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:315:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_ModuMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:315:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   315 | void Eng_ModuMod (track_status *ptk_stat)//L80047788()
       |                   ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_PedalMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:338:34: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_PedalMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:338:34: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   338 | void Eng_PedalMod (track_status *ptk_stat)//L800477D0()
       |                    ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_ReverbMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:343:35: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_ReverbMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:343:35: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   343 | void Eng_ReverbMod (track_status *ptk_stat)//L800477D8()
       |                     ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_ChorusMod(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:348:35: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_ChorusMod(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:348:35: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   348 | void Eng_ChorusMod (track_status *ptk_stat)//L800477E0()
       |                     ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_NoteOn(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:353:32: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_NoteOn(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:353:32: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   353 | void Eng_NoteOn (track_status *ptk_stat)//L800477E8()
       |                  ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_NoteOff(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:358:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_NoteOff(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:358:33: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   358 | void Eng_NoteOff (track_status *ptk_stat)//L800477F0()
       |                   ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_StatusMark(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:388:54: error: too many arguments to function
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_StatusMark(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:388:54: error: too many arguments to function
   388 |                                         cbs->callfunc(cbs->type, cbs->curval);
       |                                         ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_GateJump(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:411:33: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_GateJump(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:411:33: warning: comparison is always false due to limited range of data type [-Wtype-limits]
   411 |                 if (*eng_pgates == 0xFF)
       |                     ~~~~~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:420:47: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:420:47: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
   420 |             eng_plabellist = ptk_stat->pstart + *(ptk_stat->plabellist + eng_labelnum);
       |                              ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                                               |
       |                                               unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:421:30: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:421:30: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   421 |             ptk_stat->ppos = eng_plabellist;
       |                              ^~~~~~~~~~~~~~
       |                              |
       |                              char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_IterJump(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:438:33: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_IterJump(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:438:33: warning: comparison is always false due to limited range of data type [-Wtype-limits]
   438 |                 if (*eng_piters == 0xFF)
       |                     ~~~~~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:453:68: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:453:68: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
   453 |                                 eng_plabellist2 = ptk_stat->pstart + *(ptk_stat->plabellist + eng_labelnum2);
       |                                                   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                                                                    |
       |                                                                    unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:454:50: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:454:50: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   454 |                                 ptk_stat->ppos = eng_plabellist2;
       |                                                  ^~~~~~~~~~~~~~~
       |                                                  |
       |                                                  char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_SeqTempo(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:527:43: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_SeqTempo(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:527:43: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   527 |         eng_ptrk_indxs2 = eng_seq_stat_2->ptrk_indxs;
       |                           ~~~~~~~~~~~~~~~~^~~~~~~~~~
       |                                           |
       |                                           char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_SeqGosub(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:564:51: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_SeqGosub(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:564:51: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   564 |                 eng_ptrk_indxs3 = eng_seq_stat_3->ptrk_indxs;
       |                                   ~~~~~~~~~~~~~~~~^~~~~~~~~~
       |                                                   |
       |                                                   char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:576:75: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:576:75: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
   576 |                                 eng_plabellist3 = eng_ptrk_stat_2->pstart + *(eng_ptrk_stat_2->plabellist + eng_labelnum3);
       |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                                                                           |
       |                                                                           unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:577:57: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:577:57: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   577 |                                 eng_ptrk_stat_2->ppos = eng_plabellist3;
       |                                                         ^~~~~~~~~~~~~~~
       |                                                         |
       |                                                         char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_SeqJump(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:604:51: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_SeqJump(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:604:51: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   604 |                 eng_ptrk_indxs4 = eng_seq_stat_4->ptrk_indxs;
       |                                   ~~~~~~~~~~~~~~~~^~~~~~~~~~
       |                                                   |
       |                                                   char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:613:75: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:613:75: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
   613 |                                 eng_plabellist4 = eng_ptrk_stat_3->pstart + *(eng_ptrk_stat_3->plabellist + eng_labelnum4);
       |                                                   ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                                                                           |
       |                                                                           unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:614:57: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:614:57: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   614 |                                 eng_ptrk_stat_3->ppos = eng_plabellist4;
       |                                                         ^~~~~~~~~~~~~~~
       |                                                         |
       |                                                         char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_SeqRet(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:635:43: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_SeqRet(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:635:43: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   635 |         eng_ptrk_indxs5 = eng_seq_stat_5->ptrk_indxs;
       |                           ~~~~~~~~~~~~~~~~^~~~~~~~~~
       |                                           |
       |                                           char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_SeqEnd(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:668:51: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_SeqEnd(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:668:51: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   668 |                 eng_ptrk_indxs6 = eng_seq_stat_6->ptrk_indxs;
       |                                   ~~~~~~~~~~~~~~~~^~~~~~~~~~
       |                                                   |
       |                                                   char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:688:51: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:688:51: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   688 |                 eng_ptrk_indxs6 = eng_seq_stat_6->ptrk_indxs;
       |                                   ~~~~~~~~~~~~~~~~^~~~~~~~~~
       |                                                   |
       |                                                   char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_TrkGosub(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:722:23: warning: comparison of unsigned expression in '>= 0' is always true [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_TrkGosub(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:722:23: warning: comparison of unsigned expression in '>= 0' is always true [-Wtype-limits]
   722 |         if ((position >= 0) && (position < ptk_stat->labellist_count))
       |              ~~~~~~~~~^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_TrkJump(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:738:23: warning: comparison of unsigned expression in '>= 0' is always true [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_TrkJump(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:738:23: warning: comparison of unsigned expression in '>= 0' is always true [-Wtype-limits]
   738 |         if ((position >= 0) && (position < ptk_stat->labellist_count))
       |              ~~~~~~~~~^~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_TrkRet(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:751:45: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_TrkRet(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:751:45: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
   751 |         ptk_stat->ppos = Read_Vlq(ptk_stat->ppos, &ptk_stat->deltatime);
       |                                   ~~~~~~~~~~^~~~
       |                                             |
       |                                             unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:134:22: note:   initializing argument 1 of 'char* Read_Vlq(char*, void*)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:134:22: note:   initializing argument 1 of 'char* Read_Vlq(char*, void*)'
   134 | char *Read_Vlq(char *pstart, void *deltatime)//L80035F80()
       |                ~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:751:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:751:34: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   751 |         ptk_stat->ppos = Read_Vlq(ptk_stat->ppos, &ptk_stat->deltatime);
       |                          ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                                  |
       |                                  char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_TrkEnd(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:778:41: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_TrkEnd(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:778:41: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
   778 |     ptk_stat->ppos = Read_Vlq(ptk_stat->pstart, &ptk_stat->deltatime);
       |                               ~~~~~~~~~~^~~~~~
       |                                         |
       |                                         unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:134:22: note:   initializing argument 1 of 'char* Read_Vlq(char*, void*)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:134:22: note:   initializing argument 1 of 'char* Read_Vlq(char*, void*)'
   134 | char *Read_Vlq(char *pstart, void *deltatime)//L80035F80()
       |                ~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:778:30: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:778:30: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   778 |     ptk_stat->ppos = Read_Vlq(ptk_stat->pstart, &ptk_stat->deltatime);
       |                      ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                              |
       |                              char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void Eng_NullEvent(track_status*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:781:35: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void Eng_NullEvent(track_status*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:781:35: warning: unused parameter 'ptk_stat' [-Wunused-parameter]
   781 | void Eng_NullEvent (track_status *ptk_stat)//L800488FC()
       |                     ~~~~~~~~~~~~~~^~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C: In function 'void SeqEngine()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:824:59: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP: In function 'void SeqEngine()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:824:59: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
   824 |                             eng_tmp_ppos =  (ptrkstattbl->ppos);
       |                                             ~~~~~~~~~~~~~~^~~~~
       |                                                           |
       |                                                           unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:828:108: warning: array subscript has type 'char' [-Wchar-subscripts]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:828:108: warning: array subscript has type 'char' [-Wchar-subscripts]
   828 |                                                                         CmdFuncArr[ptrkstattbl->patchtype][*eng_tmp_ppos]((track_status *)ptrkstattbl);
       |                                                                                                            ^~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:830:105: warning: array subscript has type 'char' [-Wchar-subscripts]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:830:105: warning: array subscript has type 'char' [-Wchar-subscripts]
   830 |                                                                         ptrkstattbl->ppos += skip_table[*eng_tmp_ppos];
       |                                                                                                         ^~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:831:115: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:831:115: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
   831 |                                                                         ptrkstattbl->ppos = Read_Vlq(ptrkstattbl->ppos, &ptrkstattbl->deltatime);
       |                                                                                                      ~~~~~~~~~~~~~^~~~
       |                                                                                                                   |
       |                                                                                                                   unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:134:22: note:   initializing argument 1 of 'char* Read_Vlq(char*, void*)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:134:22: note:   initializing argument 1 of 'char* Read_Vlq(char*, void*)'
   134 | char *Read_Vlq(char *pstart, void *deltatime)//L80035F80()
       |                ~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:831:101: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:831:101: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   831 |                                                                         ptrkstattbl->ppos = Read_Vlq(ptrkstattbl->ppos, &ptrkstattbl->deltatime);
       |                                                                                             ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                                                                                                     |
       |                                                                                                     char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:835:78: warning: array subscript has type 'char' [-Wchar-subscripts]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:835:78: warning: array subscript has type 'char' [-Wchar-subscripts]
   835 |                                                                 DrvFunctions[*eng_tmp_ppos]((track_status *)ptrkstattbl);
       |                                                                              ^~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:835:92: error: too many arguments to function
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:835:92: error: too many arguments to function
   835 |                                                                 DrvFunctions[*eng_tmp_ppos]((track_status *)ptrkstattbl);
       |                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:839:69: warning: array subscript has type 'char' [-Wchar-subscripts]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:839:69: warning: array subscript has type 'char' [-Wchar-subscripts]
   839 |                                     ptrkstattbl->ppos += skip_table[*eng_tmp_ppos];
       |                                                                     ^~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:840:79: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:840:79: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
   840 |                                     ptrkstattbl->ppos = Read_Vlq(ptrkstattbl->ppos, &ptrkstattbl->deltatime);
       |                                                                  ~~~~~~~~~~~~~^~~~
       |                                                                               |
       |                                                                               unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:134:22: note:   initializing argument 1 of 'char* Read_Vlq(char*, void*)'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:134:22: note:   initializing argument 1 of 'char* Read_Vlq(char*, void*)'
   134 | char *Read_Vlq(char *pstart, void *deltatime)//L80035F80()
       |                ~~~~~~^~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.C:840:65: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSSEQ.CPP:840:65: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   840 |                                     ptrkstattbl->ppos = Read_Vlq(ptrkstattbl->ppos, &ptrkstattbl->deltatime);
       |                                                         ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                                                                 |
       |                                                                 char*
 
-SEQLOAD.C:
+SEQLOAD.CPP:
 
 In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/seqload.h:11,
-                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C:4:
+                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP:4:
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:237:9: error: 's16' does not name a type
   237 |         s16 left;
       |         ^~~
@@ -4899,80 +4899,80 @@ C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:32: error: 's16' was
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:44: error: 's16' was not declared in this scope
   473 | extern void SpuSetSerialInAttr(s16 dry_on, s16 effect_on);
       |                                            ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C: In function 'int open_sequence_data()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C:56:46: error: 'module_open' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP: In function 'int open_sequence_data()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP:56:46: error: 'module_open' was not declared in this scope
    56 |         fp_seq_file = (Wess_File_IO_Struct *)module_open(loaderfile);
       |                                              ^~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C: In function 'void close_sequence_data()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C:72:17: error: 'module_close' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP: In function 'void close_sequence_data()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP:72:17: error: 'module_close' was not declared in this scope
    72 |                 module_close(fp_seq_file);
       |                 ^~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C: In function 'int wess_seq_load_sub(int, void*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C:92:16: error: invalid conversion from 'void*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP: In function 'int wess_seq_load_sub(int, void*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP:92:16: error: invalid conversion from 'void*' to 'char*' [-fpermissive]
    92 |         pmem = memptr;
       |                ^~~~~~
       |                |
       |                void*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C:113:27: error: 'module_seek' was not declared in this scope; did you mean 'module_header'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP:113:27: error: 'module_seek' was not declared in this scope; did you mean 'module_header'?
   113 |                 seqseek = module_seek(fp_seq_file, psq_info->fileposition, PSXCD_SEEK_SET);
       |                           ^~~~~~~~~~~
       |                           module_header
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C:121:27: error: 'module_read' was not declared in this scope; did you mean 'module_header'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP:121:27: error: 'module_read' was not declared in this scope; did you mean 'module_header'?
   121 |                 seqread = module_read(&(ref_pm_stat->pmod_info->pseq_info + seqnum)->seq_hdr, readbytes, fp_seq_file);
       |                           ^~~~~~~~~~~
       |                           module_header
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.C:84:13: warning: unused variable 'seqload' [-Wunused-variable]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOAD.CPP:84:13: warning: unused variable 'seqload' [-Wunused-variable]
    84 |         int seqload;
       |             ^~~~~~~
 
-WESSAPIM.C:
+WESSAPIM.CPP:
 
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:15:25: error: conflicting declaration 'int SeqOn'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:15:25: error: conflicting declaration 'int SeqOn'
    15 | extern int              SeqOn;              //80075778
       |                         ^~~~~
-In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:8:
+In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:8:
 C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessseq.h:17:21: note: previous declaration as 'volatile int SeqOn'
    17 | extern volatile int SeqOn;
       |                     ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C: In function 'char wess_master_sfx_volume_get()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:20:10: error: 'Is_Module_Loaded' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP: In function 'char wess_master_sfx_volume_get()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:20:10: error: 'Is_Module_Loaded' was not declared in this scope
    20 |     if (!Is_Module_Loaded())
       |          ^~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C: In function 'char wess_master_mus_volume_get()':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:32:10: error: 'Is_Module_Loaded' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP: In function 'char wess_master_mus_volume_get()':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:32:10: error: 'Is_Module_Loaded' was not declared in this scope
    32 |     if (!Is_Module_Loaded())
       |          ^~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C: In function 'void wess_master_sfx_vol_set(char)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:44:10: error: 'Is_Module_Loaded' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP: In function 'void wess_master_sfx_vol_set(char)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:44:10: error: 'Is_Module_Loaded' was not declared in this scope
    44 |     if (!Is_Module_Loaded())
       |          ^~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C: In function 'void wess_master_mus_vol_set(char)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:63:14: error: 'Is_Module_Loaded' was not declared in this scope
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP: In function 'void wess_master_mus_vol_set(char)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:63:14: error: 'Is_Module_Loaded' was not declared in this scope
    63 |         if (!Is_Module_Loaded())
       |              ^~~~~~~~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:90:53: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:90:53: warning: comparison is always true due to limited range of data type [-Wtype-limits]
    90 |                                         if (*lpdest != 0xFF)
       |                                             ~~~~~~~~^~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:96:66: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:96:66: error: invalid conversion from 'unsigned char*' to 'char*' [-fpermissive]
    96 |                                                     temp = ptmp->ppos; //copy
       |                                                            ~~~~~~^~~~
       |                                                                  |
       |                                                                  unsigned char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:97:70: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:97:70: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
    97 |                                                         ptmp->ppos = action;//action
       |                                                                      ^~~~~~
       |                                                                      |
       |                                                                      char*
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.C:101:70: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSAPIM.CPP:101:70: error: invalid conversion from 'char*' to 'unsigned char*' [-fpermissive]
   101 |                                                         ptmp->ppos = temp; //restore
       |                                                                      ^~~~
       |                                                                      |
       |                                                                      char*
 
-SEQLOADR.C:
+SEQLOADR.CPP:
 
 In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/seqload.h:11,
-                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOADR.C:4:
+                 from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOADR.CPP:4:
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:237:9: error: 's16' does not name a type
   237 |         s16 left;
       |         ^~~
@@ -5424,20 +5424,20 @@ C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:32: error: 's16' was
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:44: error: 's16' was not declared in this scope
   473 | extern void SpuSetSerialInAttr(s16 dry_on, s16 effect_on);
       |                                            ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOADR.C: In function 'int wess_seq_range_load(int, int, void*)':
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOADR.C:56:22: error: 'open_sequence_data' was not declared in this scope; did you mean 'sequence_data'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOADR.CPP: In function 'int wess_seq_range_load(int, int, void*)':
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOADR.CPP:56:22: error: 'open_sequence_data' was not declared in this scope; did you mean 'sequence_data'?
    56 |                 if (!open_sequence_data() || !numseqs)
       |                      ^~~~~~~~~~~~~~~~~~
       |                      sequence_data
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOADR.C:66:17: error: 'close_sequence_data' was not declared in this scope; did you mean 'sequence_data'?
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/SEQLOADR.CPP:66:17: error: 'close_sequence_data' was not declared in this scope; did you mean 'sequence_data'?
    66 |                 close_sequence_data();
       |                 ^~~~~~~~~~~~~~~~~~~
       |                 sequence_data
 
 
-WESSBASE.C:
+WESSBASE.CPP:
 
-In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.C:5:
+In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.CPP:5:
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:237:9: error: 's16' does not name a type
   237 |         s16 left;
       |         ^~~
@@ -5889,20 +5889,20 @@ C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:32: error: 's16' was
 C:/msys64/usr/local/ps2dev/ps2sdk/iop/include/libspu2.h:473:44: error: 's16' was not declared in this scope
   473 | extern void SpuSetSerialInAttr(s16 dry_on, s16 effect_on);
       |                                            ^~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.C:56:5: error: conflicting declaration 'int SeqOn'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.CPP:56:5: error: conflicting declaration 'int SeqOn'
    56 | int SeqOn = 0;
       |     ^~~~~
-In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.C:7:
+In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.CPP:7:
 C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessapi.h:75:21: note: previous declaration as 'volatile int SeqOn'
    75 | extern volatile int SeqOn;
       |                     ^~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.C:57:15: error: conflicting declaration 'long unsigned int millicount'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.CPP:57:15: error: conflicting declaration 'long unsigned int millicount'
    57 | unsigned long millicount = 0;
       |               ^~~~~~~~~~
 C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessapi.h:73:31: note: previous declaration as 'volatile long unsigned int millicount'
    73 | extern volatile unsigned long millicount;
       |                               ^~~~~~~~~~
-C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.C:60:5: error: conflicting declaration 'int WessTimerActive'
+C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/WESSBASE.CPP:60:5: error: conflicting declaration 'int WessTimerActive'
    60 | int WessTimerActive = 0;
       |     ^~~~~~~~~~~~~~~
 In file included from C:/msys64/home/David/PS2-PSXDOOM/PSXDOOM/wessapi.h:12:

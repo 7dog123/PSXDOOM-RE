@@ -11,7 +11,7 @@ endif()
 
 # Project configuration
 set(PROJECT_NAME PSXDOOM)
-project(${PROJECT_NAME} LANGUAGES C ASM)
+project(${PROJECT_NAME} LANGUAGES C CXX ASM)
 
 include("${PS2DEV}/share/ps2dev.cmake" REQUIRED)
 INCLUDE_DIRECTORIES("${PS2SDK}/iop/include")
@@ -20,6 +20,8 @@ set(GAME_SRC_DIR "${PROJECT_SOURCE_DIR}/${PROJECT_NAME}")
 
 # Compiler settings
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wreturn-type -Wextra -Wall -O2 -g")
+set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -Wreturn-type -Wextra -Wall -O2 -g")
+
 
 # Source files
 set(SOURCES
@@ -56,7 +58,7 @@ set(SOURCES
 	${GAME_SRC_DIR}/r_main.c
 	${GAME_SRC_DIR}/vsprintf.c
 	${GAME_SRC_DIR}/w_wad.c
-	${GAME_SRC_DIR}/psx_file.c
+	${GAME_SRC_DIR}/psx_file.cpp
 	${GAME_SRC_DIR}/z_zone.c
 	${GAME_SRC_DIR}/psxmain.c
 	${GAME_SRC_DIR}/l_main.c
@@ -74,20 +76,20 @@ set(SOURCES
 	#${GAME_SRC_DIR}/m_fixed.c
 	${GAME_SRC_DIR}/m_fixed.s
 	${GAME_SRC_DIR}/tables.c
-	${GAME_SRC_DIR}/psxcd.c
+	${GAME_SRC_DIR}/psxcd.cpp
 	${GAME_SRC_DIR}/s_sound.c
-	${GAME_SRC_DIR}/psxspu.c
-	${GAME_SRC_DIR}/psxcmd.c
-	${GAME_SRC_DIR}/wessapip.c
-	${GAME_SRC_DIR}/wessapi.c
-	${GAME_SRC_DIR}/wessarc.c
-	${GAME_SRC_DIR}/wessapit.c
-	${GAME_SRC_DIR}/wessseq.c
-	${GAME_SRC_DIR}/seqload.c
-	${GAME_SRC_DIR}/lcdload.c
-	${GAME_SRC_DIR}/wessapim.c
-	${GAME_SRC_DIR}/seqloadr.c
-	${GAME_SRC_DIR}/wessbase.c
+	${GAME_SRC_DIR}/psxspu.cpp
+	${GAME_SRC_DIR}/psxcmd.cpp
+	${GAME_SRC_DIR}/wessapip.cpp
+	${GAME_SRC_DIR}/wessapi.cpp
+	${GAME_SRC_DIR}/wessarc.cpp
+	${GAME_SRC_DIR}/wessapit.cpp
+	${GAME_SRC_DIR}/wessseq.cpp
+	${GAME_SRC_DIR}/seqload.cpp
+	${GAME_SRC_DIR}/lcdload.cpp
+	${GAME_SRC_DIR}/wessapim.cpp
+	${GAME_SRC_DIR}/seqloadr.cpp
+	${GAME_SRC_DIR}/wessbase.cpp
 	${GAME_SRC_DIR}/snmain.s
 )
 
